@@ -19,7 +19,7 @@ class Rellotge{
 
 private:	
 	string hora; /* Hora en format HH:MM. */
-	string data; /* Data en format DD.MM.AA. */
+	//string data; /* Data en format DD.MM.AA. */
 
 
 public:
