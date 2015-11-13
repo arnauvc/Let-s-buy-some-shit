@@ -4,6 +4,7 @@
 using namespace std;
 
 class producte{
+  
   private:
     string nom;
     string seccio;
