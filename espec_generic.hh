@@ -1,5 +1,7 @@
 CLASSES:
 
+http://stackoverflow.com/questions/19842035/stdmap-how-to-sort-by-value-then-by-key
+
         class client{
         
         int numero //numero de torn
