@@ -1,0 +1,28 @@
+CLASSES:
+
+        CLIENT:
+        int numero de torn
+        int caixa on ha d'anar
+        rellotge temps del rellotge
+        -
+        
+
+        CAIXES:
+        -int/bool tipus de caixa(tancada, rapida o normal)
+
+
+        SUPERMERCAT:
+        int nombre rengles (entre 1-26 aka A-Z)
+        int nombre columnes(entre 1-9)
+        int nombre caixes(1-20)
+        
+
+        PRODUCTE:
+        string nom
+        string seccio(lletra i numero)
+        double preu(decimals)   
+        int temps_cobrament(tc>0)
+                
+
+
+        (RELLOTGE)
