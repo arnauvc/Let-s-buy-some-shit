@@ -52,14 +52,14 @@ public:
 		\pre Cert
 		\post Retorna la data del paràmetre implícit en format string (DD.MM.AA).
 	*/
-	string consulta_data();
+	//string consulta_data();
 
 
 	/** @brief Compara dues dates.
 		\pre <em>data1, data2</em> són dues dates en format string.
 		\post Retorna 0 si són iguals, 1 si <em>data1</em> és anterior a <em>data2</em>, 2 altrament.
 	*/
-	int compara_dates(string data1, string data2);
+	//int compara_dates(string data1, string data2);
 
 
 	/** @brief Compara dues hores.
@@ -88,7 +88,7 @@ public:
 		\pre Cert
 		\post Modifica la data del paràmetre implícit segons parametre explicit.
 	*/
-	void modifica_data(string d);
+	//void modifica_data(string d);
 };
 
 #endif
