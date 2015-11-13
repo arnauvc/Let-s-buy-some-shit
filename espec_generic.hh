@@ -4,8 +4,15 @@ CLASSES:
         int numero de torn
         int caixa on ha d'anar
         rellotge temps del rellotge
+        map<producte,int> //Contçe els productes i les seves quantitats
         -
-        
+        funcions:
+                /* No cal necessariament */
+                int nombre_productes();
+                /** @brief consulta i retorna el nombre de productes del
+                        client
+                \pre El client existeix i el te productes assignats
+                \post Retorna el nombre[enter] de productes
 
         CAIXES:
         -int/bool tipus de caixa(tancada, rapida o normal)
