@@ -2,7 +2,7 @@ CLASSES:
 
         CLIENT:
         int numero de torn
-        int caixa on ha d'anar
+        int caixa on ha danar
         rellotge temps del rellotge
         map<producte,int> //Contçe els productes i les seves quantitats
         -
