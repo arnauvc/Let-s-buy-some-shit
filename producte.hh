@@ -1,5 +1,5 @@
 #include <iostream>
-#include <strng>
+#include <string>
 
 using namespace std;
 
