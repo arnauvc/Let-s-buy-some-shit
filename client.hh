@@ -38,17 +38,18 @@ class Client{
    
    void afegir_caixa(int caixa);
    /* Pre: el parametre implicit no te #caixa */
-   /* Post: el resultat es el #caixa*/
+   /* Post: el resultat es el #caixa */
    
    void modificar_caixa(int caixa);
-   /* Pre: el parametre implicit ja te caixa pero es massa lent*/
-   /* Post: el resultat es una caixa mes rapida*/
+   /* Pre: el parametre implicit ja te caixa pero es massa lent */
+   /* Post: el resultat es un canvi de caixa */
    
    void afegir_producte(int producte);
    /* Pre: el parametre implicit no te productes */
    /* Post: afegeix productes al parametre implicit */
    
    /*Consultors*/
+   
    int consultar_torn(int torn) const;
    /* Pre: cert */
    /* Pro: el resultat es el torn del client del parametre implicit*/
