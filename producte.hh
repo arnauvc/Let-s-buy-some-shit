@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class producte{
+class Producte{
   
   private:
     string nom;
@@ -14,12 +14,17 @@ class producte{
   public:
   
   /* Constructora */
+  Producte();
   /** @brief Creadora per defecte.
    * \pre Cert
-   * \post El resultat es un producte sense inicialitzar
-  */
+   * \post El resultat es un producte sense inicialitzar*/
+  Producte(string nom, string seccio, double preu, int temps_cobrament);
+  /* Pre:                               */
+  /* Post: el resultat es el producte amb el nom, seccio, preu, temps cobrament */
   
   /*Destructora */
+  
+  ~Producte();
   /** @brief Destructora per defecte
    * \pre Existeix un producte
    * \post Destrueix el producte
@@ -27,6 +32,14 @@ class producte{
   
   
   /*Consultores*/
+  
+  string consulta_nom(string nom);
+  
+  string consulta_seccio(string seccio);
+  
+  double consulta_preu(double preu);
+  
+  int consulta_temps(int temps_cobrament);
   /** @brief Consulta
    * 
   */
@@ -36,5 +49,7 @@ class producte{
    * \post Escriu per pantalla el nom, la seccio,
    * el preu i el temps de cobrament del producte del parametre implicit
   */
-  void escriu_producte();
+  void llegir();
+  
+  void escriu_producte() const;
 }
