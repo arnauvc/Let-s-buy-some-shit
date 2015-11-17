@@ -8,6 +8,9 @@
 
 using namespace std;
 
+
+
+
 class Supermercat{
   
   public:
@@ -23,7 +26,8 @@ class Supermercat{
   
   /** @brief Creadora per defecte.
    * \pre Cert
-   * \post El resultat es un supermercat sense inicialitzar*/
+   * \post El resultat es un supermercat sense inicialitzar
+  */
   Supermercat();
   
   
