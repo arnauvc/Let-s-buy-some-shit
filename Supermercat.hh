@@ -15,9 +15,20 @@ class supermercat{
   
   
   private:
+  /*Constructora*/
   
+  /** @brief Creadora per defecte.
+   * \pre Cert
+   * \post El resultat es un supermercat sense inicialitzar*/
   Supermercat();
   
+  
+  /*Destructora */
+  
+  /** @brief Destructora per defecte
+   * \pre Existeix un producte
+   * \post Destrueix el producte
+  */ 
   ~Supermercat();
   
   void inicialitza();
