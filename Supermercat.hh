@@ -32,32 +32,32 @@ class supermercat{
   */ 
   ~Supermercat();
   
-  /** @brief 
-   * \pre 
-   * \post 
+  /** @brief Inicialitza els valors del supermercat del parametre implicit
+   * \pre Cert
+   * \post Modifica els camps del paramtre implicit
   */ 
   void inicialitza();
   
-  /** @brief 
-   * \pre 
-   * \post 
+  /** @brief Afegeix clients amb els respectius productes associats
+   * \pre Cert
+   * \post Guarda la llista de clients amb els productes associats
   */ 
   void carrega();
   
-  /** @brief 
-   * \pre 
-   * \post 
+  /** @brief Simula els pagaments
+   * \pre Existeix un supermercat, iniciaitzat i carregat en el parametre implicit. S'especifica el nombre de configuracions diferents
+   * \post Escriu per pantalla el temps mitja de pagament segons la configuracio
   */
   void simula();
   
-  /** @brief 
-   * \pre 
-   * \post 
+  /** @brief Dona informacio d'un producte concret 
+   * \pre Existeix el producte i esta inicialitzat
+   * \post Escriu per pantalla el nom, preu, seccio i temps de cobrament del producte del parametre implicit
   */
   void informa(); //retorna escriu
   
-  /** @brief 
-   * \pre 
+  /** @brief Escriu tots els productes d'una seccio 
+   * \pre Supermercat inicialitzat i carregat
    * \post 
   */
   void producte_seccio(); //escriu per pantalla tots els productes de la seccio
