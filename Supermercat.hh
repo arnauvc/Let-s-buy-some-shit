@@ -67,7 +67,7 @@ class supermercat{
    * \pre 
    * \post 
   */
-  void millor cami();
+  void millor_cami();
   
 
  };
