@@ -43,39 +43,39 @@ class Client{
    /*Modificadors*/
    
    /** @brief Afegeix numero de caixa
-      \pre: el parametre implicit no te #caixa 
-      \post: el resultat es el #caixa 
+    * \pre: el parametre implicit no te #caixa 
+    * \post: el resultat es el #caixa 
    */
    void afegir_caixa(int caixa);
    
    /** @brief
-      \pre: el parametre implicit ja te caixa pero es massa lent 
-      \post: el resultat es un canvi de caixa 
+    * \pre: el parametre implicit ja te caixa pero es massa lent 
+    * \post: el resultat es un canvi de caixa 
    */
    void modificar_caixa(int caixa);
    
    /** @brief
-   /* Pre: el parametre implicit no te productes 
-   /* Post: afegeix productes al parametre implicit
+    * \pre: el parametre implicit no te productes 
+    * \post: afegeix productes al parametre implicit
    */
    void afegir_producte(int producte);
    
-   /*Consultors*/
+   /*Consultores*/
    
-   /** @brief
-   /* Pre: cert */
-   /* Pro: el resultat es el torn del client del parametre implicit
+   /** @brief Consulta el torn del client
+    * \pre: cert
+    * \pro: el resultat es el torn del client del parametre implicit
    */
    int consultar_torn(int torn) const;
    
    /** @brief
-   /* Pre: cert */
+    * \pre: cert
    /* Pro: el resultat la caixa que pertoca al client del parametre implicit
    */
    int consultar_caixa(int caixa);
    
    /** @brief
-   /* Pre: cert */
+   /* Pre: cert
    /* Pro: el resultat es la hora del ticker del parametre implicit
    /*
    Rellotge consulta_hora(Rellotge R) const;
