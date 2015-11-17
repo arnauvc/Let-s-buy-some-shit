@@ -42,38 +42,44 @@ class Producte{
   
   
   
-  /* Pre: cert */
-  /* Post: el resultat es el nom del parametre implicit */
+  /** @brief Consultora de nom
+   * \Pre: cert
+   * \Post: el resultat es el nom del parametre implicit 
+  */
   string consulta_nom(string nom);
   
-  /* Pre: cert */
-  /* Post: el resultat es la seccio del parametre implicit */
+  /** @brief Consultora de seccio
+   *  \Pre: cert
+   *  \Post: el resultat es la seccio del parametre implicit 
+  */
   string consulta_seccio(string seccio);
   
-  /* Pre: el parametre implicit te preu */
-  /* Post: el resultat es el preu del parametre implicit */
+  /** @brief Consultora del preu
+   * \Pre: el parametre implicit te preu 
+   * \Post: el resultat es el preu del parametre implicit 
+  */
   double consulta_preu(double preu);
   
-  /* Pre: El parametre implicit te el temps de cobrament inicialitzat */
-  /* Pro: el resultat es el temps de cobrament del parametre implicit */
+  /** @brief Consultora de temps
+   *  \Pre: El parametre implicit te el temps de cobrament inicialitzat
+   *  \Pro: el resultat es el temps de cobrament del parametre implicit 
+  */
   int consulta_temps(int temps_cobrament);
   
   
   
-  /** @brief Escriu dades del producte
-   * \pre Existeix un producte i esta inicialitzat
-   * \post Escriu per pantalla el nom, la seccio,
-   * el preu i el temps de cobrament del producte del parametre implicit
-  */
+  
   
   
   /* Pre: hi ha preparats al canal estandar d'entrada */
   /* Post: el parametre implicit passa a tenir els atributs llegits del canal estandard d'entrada */
   void llegir_producte();
   
-  
-  /* Pre: cert */
-  /* Post: s'han escrit els atributs del parametre implicit al canal estandard de sortida */
+  /** @brief Escriu dades del producte
+   * \pre Existeix un producte i esta inicialitzat
+   * \post Escriu per pantalla el nom, la seccio,
+   * el preu i el temps de cobrament del producte del parametre implicit
+  */
   void escriu_producte() const;
   
   
