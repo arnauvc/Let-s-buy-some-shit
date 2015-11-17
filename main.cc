@@ -18,6 +18,6 @@ int main() {
   else if (condicio == "productes")
   else if (condicio == "seccio")
   else if (condicio == "millor cami")
-  else if (codicio = "sortir") break;
+  else if (codicio == "sortir") break;
  }
 }
