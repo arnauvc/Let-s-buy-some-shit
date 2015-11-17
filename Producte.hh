@@ -36,12 +36,7 @@ class Producte{
   
   
   /*Consultores*/
-  
-  
-  // Falta posar a cada funcio, un nom codificat amb doxygen, aka  @brief bla bla bla !!
-  
-  
-  
+
   /** @brief Consultora de nom
    * \Pre: cert
    * \Post: el resultat es el nom del parametre implicit 
@@ -71,13 +66,15 @@ class Producte{
   
   
   
-  /* Pre: hi ha preparats al canal estandar d'entrada */
-  /* Post: el parametre implicit passa a tenir els atributs llegits del canal estandard d'entrada */
+  /** @brief Llegeix dades del producte.
+   * \Pre: hi ha preparats al canal estandar d'entrada
+   * \Post : el parametre implicit passa a tenir els atributs llegits del canal estandard d'entrada 
+  */
   void llegir_producte();
   
-  /** @brief Escriu dades del producte
-   * \pre Existeix un producte i esta inicialitzat
-   * \post Escriu per pantalla el nom, la seccio,
+  /** @brief Escriu dades del producte.
+   * \Pre: Existeix un producte i esta inicialitzat
+   * \Post: Escriu per pantalla el nom, la seccio,
    * el preu i el temps de cobrament del producte del parametre implicit
   */
   void escriu_producte() const;
