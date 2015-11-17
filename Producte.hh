@@ -64,11 +64,6 @@ class Producte{
   */
   int consulta_temps(int temps_cobrament);
   
-  
-  
-  
-  
-  
   /** @brief Llegeix dades del producte.
    * \pre Hi ha preparats al canal estandar d'entrada
    * \post El parametre implicit passa a tenir els atributs llegits del canal estandard d'entrada 
