@@ -1,5 +1,5 @@
 #include <iostream>
-#include <strng>
+#include <string>
 #include "Producte.hh"
 #include "Client.hh"
 
