@@ -74,9 +74,9 @@ class Client{
    */
    int consultar_caixa(int caixa);
    
-   /** @brief
-   /* Pre: cert
-   /* Pro: el resultat es la hora del ticker del parametre implicit
-   /*
+   
+   /*Pre: cert */
+   /* Pro: el resultat es la hora del ticker del parametre implicit */
+  
    Rellotge consulta_hora(Rellotge R) const;
 }
