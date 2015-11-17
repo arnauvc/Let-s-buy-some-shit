@@ -45,7 +45,11 @@ class Client{
   ~Client();
 
    /*Modificadors*/
-   
+   /** @brief Afegeix torn
+    * \pre el parametre implicit no te torn 
+    * \post el resultat es el torn
+   */
+   void afegir_torn(int torn);
    /** @brief Afegeix numero de caixa
     * \pre el parametre implicit no te #caixa 
     * \post el resultat es el #caixa 
