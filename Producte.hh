@@ -1,3 +1,7 @@
+/** @file Producte.hh
+	@brief Classe Producte
+*/
+
 #include <iostream>
 #include <string>
 
