@@ -14,13 +14,10 @@ using namespace std;
     @brief Representa un rellotge, té una <em>hora</em> i <em>data</em> en format string que poden ser consultades
     i modificades.
     */
-
 class Rellotge{
 
 private:	
 	string hora; /* Hora en format HH:MM. */
-	//string data; /* Data en format DD.MM.AA. */
-
 
 public:
 	
@@ -28,7 +25,7 @@ public:
 	/** @brief Creadora per defecte.
 		\pre cert
 		\post El resultat és un rellotge nou, buit.
-*/ 
+	*/ 
 	Rellotge();
 
 	
@@ -46,20 +43,6 @@ public:
 		\post Retorna l’hora del paràmetre implícit en format string (HH:MM).
 	*/
 	string consulta_hora();
-
-
-	/** @brief Consulta la data actual d’un rellotge.
-		\pre Cert
-		\post Retorna la data del paràmetre implícit en format string (DD.MM.AA).
-	*/
-	//string consulta_data();
-
-
-	/** @brief Compara dues dates.
-		\pre <em>data1, data2</em> són dues dates en format string.
-		\post Retorna 0 si són iguals, 1 si <em>data1</em> és anterior a <em>data2</em>, 2 altrament.
-	*/
-	//int compara_dates(string data1, string data2);
 
 
 	/** @brief Compara dues hores.
