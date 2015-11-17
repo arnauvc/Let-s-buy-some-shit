@@ -1,0 +1,2 @@
+Falta:
+-Implementar algortime a busqueda de cami més curt
