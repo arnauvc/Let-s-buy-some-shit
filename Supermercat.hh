@@ -39,7 +39,8 @@ class supermercat{
   
   else if (condicio == "millor cami")
   else if (codicio = "sortir") break;
- }
+ };
+#endif
   
   
   
