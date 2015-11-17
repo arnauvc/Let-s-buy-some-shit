@@ -1,12 +1,17 @@
 /**
  * @mainpage Pràctica PRO2 - Gestio d'un supermercat
+ 
+/** @file main.cc
+ *  @brief Programa principal de <em>Pràctica PRO2 - Gestor d'un supermercat'</em>.
+*/
 
 #include "client.hh"
 #include "Producte.hh"
 #include "supermercat.hh"
 #include "Rellotge.hh"
-//#include "espec_generic.hh" aquest fitxer no és una classe !!!
 
+/** @brief Programa principal.
+*/
 int main() {
  Supermercat super;
  string condicio;
