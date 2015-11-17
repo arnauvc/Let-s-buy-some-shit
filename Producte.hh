@@ -36,7 +36,11 @@ class Producte{
   
   
   /*Consultores*/
+  
+  
   // Falta posar a cada funcio, un nom codificat amb doxygen, aka  @brief bla bla bla !!
+  
+  
   
   /* Pre: cert */
   /* Post: el resultat es el nom del parametre implicit */
