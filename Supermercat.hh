@@ -1,5 +1,6 @@
 #include <iostream>
 #include <strng>
+#include "Producte.hh"
 
 using namespace std;
 
@@ -14,4 +15,16 @@ class supermercat{
   
   
   private:
+  
+  Supermercat();
+  
+  ~Supermercat();
+  
+  void inicialitza();
+  
+  void carrega();
+  
+  void
+  
+  
 }
