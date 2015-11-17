@@ -17,12 +17,11 @@ int main() {
  string condicio;
  while(getline(cin,condicio)){
   if (condicio == "inicialitzar") super.inicialitza();
-  else if (condicio == "carregar")
-  else if (condicio == "simular")
-  else if (condicio == "informacio")
-  else if (condicio == "productes")
-  else if (condicio == "seccio")
-  else if (condicio == "millor cami")
+  else if (condicio == "carregar") super.carrega();
+  else if (condicio == "simular") super.simula();
+  else if (condicio == "informacio") super.informa();
+  else if (condicio == "productes") super.productes_seccio();
+  else if (condicio == "millor cami")super.millor_cami();
   else if (codicio == "sortir") break;
  }
 }
