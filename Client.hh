@@ -64,19 +64,19 @@ class Client{
    
    /** @brief Consulta el torn del client
     * \pre: cert
-    * \pro: el resultat es el torn del client del parametre implicit
+    * \post: el resultat es el torn del client del parametre implicit
    */
    int consultar_torn(int torn) const;
    
    /** @brief
     * \pre: cert
-   /* Pro: el resultat la caixa que pertoca al client del parametre implicit
+    * \post: el resultat la caixa que pertoca al client del parametre implicit
    */
    int consultar_caixa(int caixa);
    
    /** @brief
-    * \Pre: cert
-    * \Pro: el resultat es la hora del ticker del parametre implicit
+    * \pre: cert
+    * \post: el resultat es la hora del ticker del parametre implicit
    */
     
    Rellotge consulta_hora(Rellotge R) const;
