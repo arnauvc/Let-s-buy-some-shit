@@ -24,7 +24,23 @@ class supermercat{
   
   void carrega();
   
-  void
+  void simula();
+  
+  void informa(); //retorna escriu
+  
+  void producte_seccio(); //escriu per pantalla tots els productes de la seccio
+  // o bé "seccio buida" si no hi ha productes a la seccio
+  
+  void millor cami
+  
+  
+  
+ 
+  
+  else if (condicio == "millor cami")
+  else if (codicio = "sortir") break;
+ }
+  
   
   
 }
