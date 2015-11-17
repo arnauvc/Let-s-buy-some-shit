@@ -3,7 +3,7 @@
 */
 #include <iostream>
 #include "Rellotge.hh"
-#include "Productes.hh"
+#include "Producte.hh"
 
 using namespace std;
 
