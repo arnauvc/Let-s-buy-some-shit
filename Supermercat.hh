@@ -32,28 +32,44 @@ class supermercat{
   */ 
   ~Supermercat();
   
+  /** @brief 
+   * \pre 
+   * \post 
+  */ 
   void inicialitza();
   
+  /** @brief 
+   * \pre 
+   * \post 
+  */ 
   void carrega();
   
+  /** @brief 
+   * \pre 
+   * \post 
+  */
   void simula();
   
+  /** @brief 
+   * \pre 
+   * \post 
+  */
   void informa(); //retorna escriu
   
+  /** @brief 
+   * \pre 
+   * \post 
+  */
   void producte_seccio(); //escriu per pantalla tots els productes de la seccio
   // o bé "seccio buida" si no hi ha productes a la seccio
   
-  void millor cami
+  /** @brief 
+   * \pre 
+   * \post 
+  */
+  void millor cami();
   
-  
-  
- 
-  
-  else if (condicio == "millor cami")
-  else if (codicio = "sortir") break;
+
  };
 #endif
-  
-  
-  
-}
+
