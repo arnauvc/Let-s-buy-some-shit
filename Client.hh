@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Rellotge.hh"
+#include "Productes.hh"
 
 using namespace std;
 
