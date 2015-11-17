@@ -1,6 +1,7 @@
 #include <iostream>
 #include <strng>
 #include "Producte.hh"
+#include "Client.hh"
 
 using namespace std;
 
