@@ -24,11 +24,10 @@ class Producte{
    * \post El resultat es un producte sense inicialitzar*/
     Producte();
    
-  /* pre                              */
-  /* post el resultat es el producte amb el nom, seccio, preu, temps cobrament */
+  /** @brief 
+   * \pre Cert                             
+   * \post el resultat es el producte amb el nom, seccio, preu, temps cobrament */
   Producte(string nom, string seccio, double preu, int temps_cobrament);
-  
-  
   
   /*Destructora */
   
