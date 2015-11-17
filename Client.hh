@@ -1,3 +1,6 @@
+/** @file Client.hh
+	@brief Classe Client
+*/
 #include <iostream>
 #include "Rellotge.hh"
 #include "Productes.hh"
