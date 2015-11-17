@@ -10,15 +10,14 @@ using namespace std;
 
 class Supermercat{
   
-  public:
-    int rengles // nombre de rengles
-    int columnes // nombre de columnes
-    int caixes // nombre de caixes
-    vector < pair<productes,int>> productes// sort i despres stable_sort
-    
-  
-  
   private:
+    int rengles; // nombre de rengles
+    int columnes; // nombre de columnes
+    int caixes; // nombre de caixes
+    vector < pair<productes,int>> productes;// sort i despres stable_sort
+    
+    
+  public:
   /*Constructora*/
   
   /** @brief Creadora per defecte.
