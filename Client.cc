@@ -1,3 +1,5 @@
+  #include "Client.hh"
+  
   Client::Client();
   
   
@@ -18,7 +20,9 @@
    void Client::afegir_producte(int producte);
    
    int Client::consultar_torn(int torn) const;
+    return torn;
    
    int Client::consultar_caixa(int caixa);
+    return caixa;
    
    Rellotge Client::consulta_hora(Rellotge R) const;
