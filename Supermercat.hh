@@ -39,7 +39,7 @@ class Supermercat{
    * \pre Cert
    * \post Modifica els camps del paramtre implicit
   */ 
-  void inicialitza();
+  void inicialitza(r,c,x,n);
   
   /** @brief Afegeix clients amb els respectius productes associats
    * \pre Cert
