@@ -1,94 +1,88 @@
-/** @file Rellotge.cc
-	@brief Classe Rellotge
-*/
+// Classe Rellotge
 
-#ifndef RELLOTGE_HH
-#define RELLOTGE_HH
-
+#include "Rellotge.hh"
 #include <string>
-#include <iostream>
-using namespace std;
+
+Rellotge::Rellotge() {
+
+}
+
+Rellotge::~Rellotge() {}
+
+string Rellotge::consulta_hora() {
+	return hora;
+}
+
+string Rellotge::consulta_data() {
+	return data;
+}
+
+int Rellotge::compara_dates(string data1, string data2) {
+	if (data1==data2) return 0;
+	else {
+		int a1, a2;
+		a1=(data1[6]*10)+data1[7];
+		a2=(data2[6]*10)+data2[7];
+		if (a1>a2) return 2;
+		if (a2>a1) return 1;
+		else {
+			int m1, m2;
+			m1=(data1[3]*10)+data1[4];
+			m2=(data2[3]*10)+data2[4];
+			if (m1>m2) return 2;
+			if (m2>m1) return 1;
+			else {
+				int d1, d2;
+				d1=(data1[0]*10)+data1[1];
+				d2=(data2[0]*10)+data2[1];
+				if (d1>d2) return 2;
+				else return 1;
+			}
+		}
+	}
+}
 
 
-/** @class Rellotge
-    @brief Representa un rellotge, té una <em>hora</em> i <em>data</em> en format string que poden ser consultades
-    i modificades.
-    */
 
-class Rellotge{
+int Rellotge::compara_hores(string hora1, string hora2) {
+	if (hora1==hora2) return 0;
+	else {
+		int h1, h2;
+		h1=(hora1[0]*10)+hora1[1];
+		h2=(hora2[0]*10)+hora2[1];
+		if (h1>h2) return 2;
+		if (h2>h1) return 1;
+		else {
+			int m1, m2;
+			m1=(hora1[3]*10)+hora1[4];
+			m2=(hora2[3]*10)+hora2[4];
+			if (m1>m2) return 2;
+			else return 1;
+			
+		}
+	}
+}
 
-private:	
-	string hora; /* Hora en format HH:MM. */
-	string data; /* Data en format DD.MM.AA. */
-
-
-public:
+int Rellotge::compara_rellotges(Rellotge R2) {
+	int h, d;
+	h = compara_hores(hora, R2.consulta_hora());
+	d = compara_dates(data, R2.consulta_data());
 	
- 	/* Constructores */
-	/** @brief Creadora per defecte.
-		\pre cert
-		\post El resultat és un rellotge nou, buit.
-*/ 
-	Rellotge();
-
-	
-	/* Destructores */
-	/** @brief Destructora per defecte.
-		\pre Existeix rellotge.
-		\post Destrueix el rellotge.
-	*/
-	~Rellotge();
+	if (d==0) {
+		if (h==0) return 0;
+		else if (h==1) return 1;
+		else return 2;
+	} else {
+		if (d==1) return 1;
+		else return 2;
+	}
+}
 
 
-	/* Consultores */
-	/** @brief Consulta l’hora actual d’un rellotge.
-		\pre Cert
-		\post Retorna l’hora del paràmetre implícit en format string (HH:MM).
-	*/
-	string consulta_hora();
+void Rellotge::modifica_hora(string h) {
+	hora=h;
+}
 
-
-	/** @brief Consulta la data actual d’un rellotge.
-		\pre Cert
-		\post Retorna la data del paràmetre implícit en format string (DD.MM.AA).
-	*/
-	string consulta_data();
-
-
-	/** @brief Compara dues dates.
-		\pre <em>data1, data2</em> són dues dates en format string.
-		\post Retorna 0 si són iguals, 1 si <em>data1</em> és anterior a <em>data2</em>, 2 altrament.
-	*/
-	int compara_dates(string data1, string data2);
-
-
-	/** @brief Compara dues hores.
-		\pre <em>hora1, hora2</em> són dues hores en format string.
-		\post Retorna 0 si són iguals, 1 si <em>hora1</em> és anterior a <em>hora2</em>, 2 altrament.
-	*/
-	int compara_hores(string hora1, string hora2);
-	
-	
-	/** @brief Compara dos rellotges.
-		\pre El paràmetre implícit i l'explícit son dos rellotges.
-		\post Retorna 0 si són iguals, 1 si el paràmetre implícit és anterior a 
-		<em>R2</em>, 2 altrament.
-	*/
-	int compara_rellotges(Rellotge R2);
-
-
-	/* Modificadores */
-	/** @brief Modifica l’hora del rellotge.
-		\pre Cert
-		\post Modifica l’hora del paràmetre implícit segons parametre explicit.
-	*/
-	void modifica_hora(string h);
-
-	/** @brief Modifica la data del rellotge.
-		\pre Cert
-		\post Modifica la data del paràmetre implícit segons parametre explicit.
-	*/
-	void modifica_data(string d);
-};
-
-#endif
+void Rellotge::modifica_data(string d) {
+	data=d;
+}
