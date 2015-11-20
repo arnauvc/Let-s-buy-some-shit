@@ -57,6 +57,11 @@ class Client{
     * \pre el parametre implicit no te #caixa 
     * \post el resultat es el #caixa 
    */
+   
+   
+   //Documentacio
+   bool te_caixa();
+  
    void afegir_caixa(int caixa);
    
    /** @brief
