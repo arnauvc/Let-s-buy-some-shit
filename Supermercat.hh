@@ -39,7 +39,7 @@ class Supermercat{
    * \pre Cert
    * \post Modifica els camps del paramtre implicit
   */ 
-  void inicialitza(r,c,x,n);
+  void inicialitza(int r,int c,int x,int n);
   
   /** @brief Afegeix clients amb els respectius productes associats
    * \pre Cert
@@ -63,7 +63,7 @@ class Supermercat{
    * \pre Supermercat inicialitzat i carregat
    * \post Escriu per pantalla tots els productes que pertanyen a la seccio especificada
   */
-  void producte_seccio(s); //escriu per pantalla tots els productes de la seccio
+  void producte_seccio(string s); //escriu per pantalla tots els productes de la seccio
   // o bé "seccio buida" si no hi ha productes a la seccio
   
   /** @brief Busca el millor cami per recorre el supermercat
