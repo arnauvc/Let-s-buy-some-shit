@@ -10,10 +10,11 @@
   Client::~Client();
 
    
-   void Client::afegir_torn(int torn);
-  
+   void Client::afegir_torn(int t);
+    torn = t;
 
-   void Client::afegir_caixa(int caixa);
+   void Client::afegir_caixa(int c);
+    caixa = c;
   
    void Client::modificar_caixa(int caixa);
    
@@ -26,3 +27,4 @@
     return caixa;
    
    Rellotge Client::consulta_hora(Rellotge R) const;
+    return R;
