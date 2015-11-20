@@ -25,7 +25,10 @@ int main() {
   else if (condicio == "carregar") super.carrega();
   else if (condicio == "simular") super.simula();
   else if (condicio == "informacio") super.informa();
-  else if (condicio == "productes") super.productes_seccio();
+  else if (condicio == "productes") {
+   cin >> seccio;
+   super.productes_seccio(seccio);
+  }
   else if (condicio == "millor cami")super.millor_cami();
   else if (codicio == "sortir") break;
  }
