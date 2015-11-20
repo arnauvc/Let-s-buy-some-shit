@@ -18,6 +18,8 @@ class Rellotge{
 
 private:	
 	string hora; /* Hora en format HH:MM. */
+	string minuts;
+	string segons;
 
 public:
 	
