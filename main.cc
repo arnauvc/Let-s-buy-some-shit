@@ -15,7 +15,7 @@
 int main() {
  Supermercat super;
  string condicio;
- int seccio;
+ string seccio;
  while(getline(cin,condicio)){
   if (condicio == "inicialitzar"){
    int r,c,x,n;
