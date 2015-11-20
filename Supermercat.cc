@@ -10,7 +10,10 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
   caixes = x;
   Producte p;
   for (int i=0; i<n; ++i){
-    vec_productes[i][j].insert(p.vProducte()); //vProducte omple tots els camps del producte
+    p.vProducte();
+    string nom = p.consulta_nom();
+    mapProductes.insert(make_Pair(nom,p));
+    //falta posar el nom dins la matriu de sets
 }
 
 void Supermercat::carrega(){
