@@ -14,7 +14,7 @@ class Supermercat{
     int rengles; // nombre de rengles
     int columnes; // nombre de columnes
     int caixes; // nombre de caixes
-    vector< vector<set<Producte>>> vec_productes(rengles, vector<set>(columnes));// sort i despres stable_sort
+    vector< vector<set<Producte>>> vec_productes(rengles, vector<set>(columnes));// podem inicialitzar a (26,9)
     
     
   public:
