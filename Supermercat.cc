@@ -18,14 +18,14 @@ void Supermercat::carrega(){
 }
 
 void Supermercat::simula(){
-  
+  //se va a cagar la burra fent això
 }
 
 void Supermercat::informa(){
   
 }
 
-void Supermercat::producte_seccio(){
+void Supermercat::producte_seccio(s){ //retorna la llista de tots els productes d'una seccio
   
 }
 
