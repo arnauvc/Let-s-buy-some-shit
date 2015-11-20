@@ -16,7 +16,7 @@
    void Client::afegir_caixa(int c);
     caixa = c;
   
-   void Client::modificar_caixa(int caixa);
+   void Client::modificar_caixa(int caixa); // un cop assignada una caixa dubto que la canviem
    
    void Client::afegir_producte(int producte);
    
