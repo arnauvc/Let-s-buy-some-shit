@@ -4,7 +4,7 @@ Supermercat::Supermercat() {}
 
 Supermercat::~Supermercat() {}
 
-void Supermercat::inicialitza(r,c,x,n){
+void Supermercat::inicialitza(int r,int c,int x,int n){
   rengles = r;
   columnes = c;
   caixes = x;
@@ -25,7 +25,7 @@ void Supermercat::informa(){
   
 }
 
-void Supermercat::producte_seccio(s){ //retorna la llista de tots els productes d'una seccio
+void Supermercat::producte_seccio(string s){ //retorna la llista de tots els productes d'una seccio
   
 }
 
