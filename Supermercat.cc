@@ -13,7 +13,13 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
     p.vProducte();
     string nom = p.consulta_nom();
     mapProductes.insert(make_Pair(nom,p));
-    //falta posar el nom dins la matriu de sets
+    
+    string seccio = p.consulta_seccio(); //consulta la seccio del producte
+    int g,h;
+    g = valorenter(seccio[0]); //passa la lletra a valor numeric
+    h = seccio[1];
+    vec_noms[g][h].insert(nom); //inserta el nom del producte al conjunt de la posicio de la matriu
+    
 }
 
 void Supermercat::carrega(){
