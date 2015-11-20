@@ -1,4 +1,4 @@
 Falta:
 -Implementar algortime a busqueda de cami més curt
 -Acabar tots els .hh de la practica
--
+-Implementar tots els cc's
