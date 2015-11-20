@@ -36,6 +36,9 @@ class Producte{
    * \post Destrueix el producte
   */ 
   ~Producte();
+  /* Modifcadora */
+  
+  void vProducte();
   
   
   /*Consultores*/
