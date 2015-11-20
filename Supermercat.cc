@@ -16,15 +16,15 @@ void Supermercat::simula(){
   
 }
 
-void informa(){
+void Supermercat::informa(){
   
 }
 
-void producte_seccio(){
+void Supermercat::producte_seccio(){
   
 }
 
-void millor_cami(){
+void Supermercat::millor_cami(){
   
 }
   
