@@ -1,4 +1,4 @@
-/** @file Rellotge.hh
+/** @file Rellotge.cc
 	@brief Classe Rellotge
 */
 
