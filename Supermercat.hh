@@ -14,7 +14,7 @@ class Supermercat{
     int rengles; // nombre de rengles
     int columnes; // nombre de columnes
     int caixes; // nombre de caixes
-    vector < pair<productes,int>> llista_productes;// sort i despres stable_sort
+    vector < pair<productes,int>> vec_productes;// sort i despres stable_sort
     
     
   public:
