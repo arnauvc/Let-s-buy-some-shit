@@ -1,6 +1,12 @@
 #include "Producte.hh"
 
+private:
+  int valorenter(char valor){
+    	return (valor - 'A');
+  }
+
 // CREADORES //
+public:
 
 Producte::~Producte() {}
 
