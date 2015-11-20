@@ -48,25 +48,25 @@ class Producte{
    * \pre cert
    * \post el resultat es el nom del parametre implicit 
   */
-  string consulta_nom(string nom);
+  string consulta_nom();
   
   /** @brief Consultora de seccio
    *  \pre cert
    *  \post el resultat es la seccio del parametre implicit 
   */
-  string consulta_seccio(string seccio);
+  string consulta_seccio();
   
   /** @brief Consultora del preu
    * \pre el parametre implicit te preu 
    * \post el resultat es el preu del parametre implicit 
   */
-  double consulta_preu(double preu);
+  double consulta_preu();
   
   /** @brief Consultora de temps
    *  \pre El parametre implicit te el temps de cobrament inicialitzat
    *  \post El resultat es el temps de cobrament del parametre implicit 
   */
-  int consulta_temps(int temps_cobrament);
+  int consulta_temps();
   
   /** @brief Llegeix dades del producte.
    * \pre Hi ha preparats al canal estandar d'entrada
