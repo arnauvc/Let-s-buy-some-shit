@@ -21,7 +21,7 @@ class Supermercat{
     int rengles; // nombre de rengles
     int columnes; // nombre de columnes
     int caixes; // nombre de caixes
-    vector<vector<set<string> > > vec_noms(rengles, vector<set<string> >(columnes));// podem inicialitzar a (26,9)
+    vector<vector<set<string> > > vec_noms;// podem inicialitzar a (26,9)// (rengles, vector<set<string> >(columnes))
     map<string,Producte> mapProductes;
     
     int valorenter(char valor){
