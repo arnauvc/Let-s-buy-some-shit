@@ -10,9 +10,12 @@ public:
 
 Producte::~Producte() {}
 
+//no cal el vProducte. La funcio es la e Llegir, que tenim a baix
+/*
 void Producte::vProducte() {
   cin >> nom >> seccio >> preu >> temps_cobrament;
 }
+*/
 
 string Producte::consulta_nom() {
   return nom;
@@ -27,7 +30,6 @@ string Producte::consulta_seccio() {
 }
 
 
-
 void llegir_producte();
-
+  cin >> nom >> seccio >> preu >> temps_cobrament;
 
