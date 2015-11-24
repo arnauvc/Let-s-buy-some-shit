@@ -64,11 +64,7 @@ class Client{
   
    void afegir_caixa(int caixa);
    
-   /** @brief
-    * \pre el parametre implicit ja te caixa pero es massa lent 
-    * \post el resultat es un canvi de caixa 
-   */
-   void modificar_caixa(int caixa);
+// He trec el canvi de caixa
    
    /** @brief
     * \pre el parametre implicit no te productes 
