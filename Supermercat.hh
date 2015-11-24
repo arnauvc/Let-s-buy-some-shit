@@ -8,8 +8,10 @@
 #include <string>
 #include <vector>
 #include <set>
+#include <utility>
 #include "Producte.hh"
 #include "Client.hh"
+
 
 using namespace std;
 
