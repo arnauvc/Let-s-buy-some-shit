@@ -1,6 +1,9 @@
 /** @file Client.hh
 	@brief Classe Client
 */
+#ifndef CLIENT_HH
+#define CLIENT_HH
+
 #include <iostream>
 #include "Rellotge.hh"
 #include "Producte.hh"
