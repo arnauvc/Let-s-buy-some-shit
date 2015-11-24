@@ -10,9 +10,9 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
   caixes = x;
   Producte p;
   for (int i=0; i<n; ++i){
-    p.vProducte();
+    p.llegeix();
     string nom = p.consulta_nom();
-    mapProductes.insert(make_Pair(nom,p));
+    mapProductes.insert(make_Pair(nom,p));//mapeja el nom i el producte
     
     string seccio = p.consulta_seccio(); //consulta la seccio del producte
     int g,h;
