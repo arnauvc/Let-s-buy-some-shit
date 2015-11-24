@@ -1,6 +1,9 @@
 /** @file Supermercat.hh
 	@brief Classe Supermercat
 */
+#ifndef SUPERMERCAT_HH
+#define SUPERMERCAT_HH
+
 #include <iostream>
 #include <string>
 #include <vector>
