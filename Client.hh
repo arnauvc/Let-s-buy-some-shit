@@ -11,14 +11,14 @@ using namespace std;
 class Client{
    
   private:
-   int torn //numero de torn
-   int caixa //numero de caixa
+   int torn;//numero de torn
+   int caixa; //numero de caixa
    static const int LAST_CAIXA = 20; // numero maxim de caixes
-   int productes //nombre de unitats de productes. 
+   int productes; //nombre de unitats de productes. 
     //Sactualitza cada cop que s'afegeix un producte
    map<Producte,int> producte_client;//Producte i la quantitat de cada producte
    bool assignat;
-   Rellotge R //HH:MM:SS del tiquet
+   Rellotge R;//HH:MM:SS del tiquet
     
   public:
   
