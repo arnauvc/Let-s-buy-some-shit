@@ -3,6 +3,7 @@
 */
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Producte.hh"
 #include "Client.hh"
 
