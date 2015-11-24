@@ -14,8 +14,8 @@
 */
 int main() {
  Supermercat super;
- string condicio;
- string seccio;
+ string condicio,seccio, nom;
+ 
  while(getline(cin,condicio)){
   if (condicio == "inicialitzar"){
    int r,c,x,n;
@@ -24,7 +24,10 @@ int main() {
   } 
   else if (condicio == "carregar") super.carrega();
   else if (condicio == "simular") super.simula();
-  else if (condicio == "informacio") super.informa();
+  else if (condicio == "informacio") {
+   cin >> nom;
+   super.informa(nom);
+  }
   else if (condicio == "productes") {
    cin >> seccio;
    super.productes_seccio(seccio);
