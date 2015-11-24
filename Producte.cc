@@ -29,6 +29,10 @@ string Producte::consulta_seccio() {
   return seccio;
 }
 
+int valorenter(char valor){
+    	return (valor - 'A');
+}
+
 
 void llegir_producte();
   cin >> nom >> seccio >> preu >> temps_cobrament;
