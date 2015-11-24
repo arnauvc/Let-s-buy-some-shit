@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <set>
 #include "Producte.hh"
 #include "Client.hh"
 
