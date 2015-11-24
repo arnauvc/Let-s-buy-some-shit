@@ -25,7 +25,7 @@ class Supermercat{
     map<string,Producte> mapProductes;
     
     int valorenter(char valor){
-    	return (valor - 'A');
+    	return (int)valor - 'A';
 	}
     
     
