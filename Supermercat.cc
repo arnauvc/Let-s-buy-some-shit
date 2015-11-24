@@ -35,7 +35,17 @@ void Supermercat::informa(){
 }
 
 void Supermercat::producte_seccio(string s){ //retorna la llista de tots els productes d'una seccio
-  
+    
+    //aquestes 3 linies es podrien posar en alguna funció
+    int g,h;
+    g = valorenter(s[0]); //passa la lletra a valor numeric
+    h = s[1];
+    
+    set<string>::iterator it = vec_noms[g][h].begin();
+    while(it != vec_noms[g][h].end() ){
+      cout << *it << endl;
+      ++it;
+    }
 }
 
 void Supermercat::millor_cami(){
