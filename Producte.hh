@@ -2,6 +2,9 @@
 	@brief Classe Producte
 */
 
+#ifndef PRODUCTE_HH
+#define PRODUCTE_HH
+
 #include <iostream>
 #include <string>
 
