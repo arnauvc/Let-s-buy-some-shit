@@ -10,7 +10,7 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
   caixes = x;
   Producte p;
   for (int i=0; i<n; ++i){
-    p.llegeix_producte();
+    p.llegir_producte();
     string nom = p.consulta_nom();
     mapProductes.insert(make_Pair(nom,p));//mapeja el nom i el producte
     
