@@ -33,7 +33,7 @@ void llegir_producte() {
 }
 
 void escriu_producte() const {
-  cout << nom << seccio << preu << temps_cobrament;
+  cout << nom << seccio << preu << temps_cobrament << endl;
 }
 
 
