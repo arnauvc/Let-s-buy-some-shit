@@ -30,4 +30,7 @@ string Producte::consulta_seccio() {
 
 void llegir_producte();
   cin >> nom >> seccio >> preu >> temps_cobrament;
+  
+void escriu_producte() const;
+
 
