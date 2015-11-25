@@ -28,9 +28,12 @@ string Producte::consulta_seccio() {
 }
 
 
-void llegir_producte();
+void llegir_producte() {
   cin >> nom >> seccio >> preu >> temps_cobrament;
-  
-void escriu_producte() const;
+}
+
+void escriu_producte() const {
+  cout << nom << seccio << preu << temps_cobrament;
+}
 
 
