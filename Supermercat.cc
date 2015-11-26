@@ -35,7 +35,7 @@ void Supermercat::simula(){
 
 void Supermercat::informa(){
   for (map<>)::const_iterator i = d.begin(); i != d.end(); ++i) {
-    cout << i->firts << " " << i->second. << " " << i-> second. << endl;
+    cout << i->first << " " << i->second.preu << " " << i-> second.seccio << " " << i-> temps_de_cobrament << endl;
   }
 }
 
