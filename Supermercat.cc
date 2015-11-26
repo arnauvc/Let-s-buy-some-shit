@@ -22,8 +22,11 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
     
 }
 
-void Supermercat::carrega(){
-  
+void Supermercat::carrega(int L){
+  cin >> L;
+  for (int i; i<L; ++i) {
+    cin >> i(identificador del client) >> hora >> nombre de producte de diferents comprats;
+  }
 }
 
 void Supermercat::simula(){
