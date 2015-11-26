@@ -31,7 +31,9 @@ void Supermercat::simula(){
 }
 
 void Supermercat::informa(){
-  
+  for (map<>)::const_iterator i = d.begin(); i != d.end(); ++i) {
+    cout << i->firts << " " << i->second. << " " << i-> second. << endl;
+  }
 }
 
 void Supermercat::producte_seccio(string s){ //retorna la llista de tots els productes d'una seccio
