@@ -33,6 +33,7 @@
    void Client::llegeix_Client() {
      cin >>  torn >> R >> numproductes;
      for(int i=0; i<numproductes; ++i) {
-       cin >> llegir_producte();
+       
+       //cin >> llegir_producte();
      }
    }
