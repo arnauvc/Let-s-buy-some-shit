@@ -13,14 +13,6 @@
    void Client::afegir_caixa(int c) {
     caixa = c;
    }
-  
-   
-   
-   void Client::afegir_producte() {
-     
-   }
-   
-  
    
    int Client::consultar_torn() const {
     return torn;
@@ -41,6 +33,6 @@
    void Client::llegeix_Client() {
      cin >>  torn >> R >> numproductes;
      for(int i=0; i<numproductes; ++i) {
-       cin >> afegir_producte();
+       cin >> llegir_producte();
      }
    }
