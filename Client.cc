@@ -14,8 +14,9 @@
     torn = t;
    }
 
-   void Client::afegir_caixa(int c);
+   void Client::afegir_caixa(int c) {
     caixa = c;
+   }
   
    
    
@@ -25,11 +26,19 @@
      productes = numero;
    }
    
-   int Client::consultar_torn(int torn) const;
+   int Client::consultar_torn(int torn) const {
     return torn;
+   }
    
-   int Client::consultar_caixa(int caixa);
+   int Client::consultar_caixa(int caixa) {
     return caixa;
+   }
    
-   Rellotge Client::consulta_hora(Rellotge R) const;
+   Rellotge Client::consulta_hora(Rellotge R) const {
     return R;
+   }
+   
+   void Client::llegeix_Client() {
+     Client client;
+     cin >>  client.torn >> client.R >> client.producte;
+   }
