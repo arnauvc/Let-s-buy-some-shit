@@ -18,11 +18,14 @@ int main() {
  
  while(getline(cin,condicio)){ //revisar el getline perque donara problemes
   if (condicio == "inicialitzar"){
-   int r,c,x,n;
+   int r,c,x,n,l;
    cin >> r >> c >> x >> n;
    super.inicialitza(r,c,x,n);
   } 
-  else if (condicio == "carregar") super.carrega();
+  else if (condicio == "carregar") {
+   cin >> l;
+   super.carrega(int l);
+  }
   else if (condicio == "simular") super.simula();
   else if (condicio == "informacio") {
    cin >> nom;
