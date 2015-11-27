@@ -74,7 +74,7 @@ public:
 	*/
 	//void modifica_data(string d);
 	
-	void suma_temps(int s) //suma segons al parametre implicit
+	void suma_temps(int s); //suma segons al parametre implicit
 };
 
 #endif
