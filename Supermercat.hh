@@ -23,6 +23,7 @@ class Supermercat{
     int caixes; // nombre de caixes
     vector<vector<set<string> > > vec_noms;// podem inicialitzar a (26,9)// (rengles, vector<set<string> >(columnes))
     map<string,Producte> mapProductes;
+    map<int,Client> mapClient; //Guardem els clients per identificador
     
     int valorenter(char valor){
     	return (int)valor - 'A';
