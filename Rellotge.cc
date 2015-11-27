@@ -13,7 +13,6 @@ string Rellotge::consulta_hora() {
 	return hora;
 }
 
-
 int Rellotge::compara_rellotges(Rellotge R2) {
 	hora1 = hora;
 	hora2 = R2.consulta_hora();
@@ -44,7 +43,16 @@ int Rellotge::compara_rellotges(Rellotge R2) {
 }
 
 void suma_temps(int s){
-	
+	int temps1,hora1,minuts1,segons1;
+	hora1 = (hora[0]*10)+hora[1])*3600; //hores a segons
+	minuts1 = (hora[3]*10)+hora[4])*60;
+	segons1 = (hora[6]*10)+hora[7]);
+	temps1 = hora1+minuts1+segons1; // la hora del rellotge en segons
+	temps1 += s;
+	//Ara fem el proces invers
+	minuts1 = temps1/60;
+	hores1 = minuts1/60;
+	hora = to_string(int(hores1))+":"+ to_string(int(minuts1%60))+ ":"+ to_string(int(segons1%60));//modifica l'hora sumantli els segons necessaris
 }
 
 void llegeix_hora(){
