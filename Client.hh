@@ -34,16 +34,14 @@ class Client{
   */
   Client();
   
-  /*
-  
   /** @brief Creadora amb parametres.
    * \pre Cert
    * \post El resultat es un Client amb el torn, la caixa, numero
    * de productes i lhora de la compra
-  */
-  Client(int torn, int caixa, int producte, Rellotge R);
   
+  Client(int torn, int caixa, int producte, Rellotge R);
   */
+  
   
   /*Destructora */
   
