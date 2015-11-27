@@ -1,10 +1,6 @@
 #include "Producte.hh"
 
-private:
-  
-
 // CREADORES //
-public:
 
 Producte::~Producte() {}
 
