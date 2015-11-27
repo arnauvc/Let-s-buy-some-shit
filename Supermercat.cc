@@ -50,9 +50,12 @@ void Supermercat::producte_seccio(string s){ //retorna la llista de tots els pro
     h = s[1];
     
     set<string>::iterator it = vec_noms[g][h].begin();
-    while(it != vec_noms[g][h].end() ){
-      cout << *it << endl;
-      ++it;
+    if (it == vec_noms[g][h].end()) return "seccio buida";
+    else{
+      while(it != vec_noms[g][h].end() ){
+        cout << *it << endl;
+        ++it;
+      }
     }
 }
 
