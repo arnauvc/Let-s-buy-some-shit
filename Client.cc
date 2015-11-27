@@ -1,10 +1,10 @@
-  #include "Client.hh"
+#include "Client.hh"
+#include "Producte.hh"
   
   Client::Client();
   
   
-  
-  Client::Client(int torn, int caixa, int producte, Rellotge R);
+  Client::Client(int torn, int caixa, int producte, Rellotge R); //el rellotge és el temps de recollida del tiquet
   
   
   Client::~Client();
