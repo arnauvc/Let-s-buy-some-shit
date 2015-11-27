@@ -41,6 +41,6 @@
    }
    
    void Client::llegeix_Client() {
-     Client client;
-     cin >>  client.torn >> client.R >> client.producte;
+     cin >>  torn >> R >> numproductes;
+     for()
    }
