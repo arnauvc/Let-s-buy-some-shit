@@ -47,31 +47,8 @@ void suma_temps(int s){
 	
 }
 
-/*int Rellotge::compara_rellotges(Rellotge R2) {
-	int h, d;
-	h = compara_hores(hora, R2.consulta_hora());
-	//d = compara_dates(data, R2.consulta_data());
-	
-	if (d==0) {
-		if (h==0) return 0;
-		else if (h==1) return 1;
-		else return 2;
-	} else {
-		if (d==1) return 1;
-		else return 2;
-	}
+void llegeix_hora(){
+	cin >> hora;
 }
-*/
-
-/*void Rellotge::modifica_hora(string h) {
-	hora=h;
-}
-
-
-
-void Rellotge::modifica_data(string d) {
-	data=d;
-}
-*/
 
 
