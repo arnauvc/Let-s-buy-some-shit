@@ -10,8 +10,9 @@
   Client::~Client();
 
    
-   void Client::afegir_torn(int t);
+   void Client::afegir_torn(int t){
     torn = t;
+   }
 
    void Client::afegir_caixa(int c);
     caixa = c;
@@ -19,6 +20,10 @@
    
    
    void Client::afegir_producte(int producte);
+   
+   void num_productes(int numero){
+     productes = numero;
+   }
    
    int Client::consultar_torn(int torn) const;
     return torn;
