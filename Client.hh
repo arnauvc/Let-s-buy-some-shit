@@ -95,7 +95,7 @@ class Client{
    int consultar_caixa(int caixa);
    
    //Doxygen documentacio
-   int num_productes(); //retorna numero de productes del client del parametre implicit
+   int consultar_num_productes(); //retorna numero de productes del client del parametre implicit
    
    /** @brief
     * \pre cert
