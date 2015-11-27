@@ -51,29 +51,25 @@ class Client{
   ~Client();
 
    /*Modificadors*/
-   /** @brief Afegeix torn
-    * \pre el parametre implicit no te torn 
-    * \post el resultat es el torn
-   */
-   void afegir_torn(int torn);
+   
    /** @brief Afegeix numero de caixa
     * \pre el parametre implicit no te #caixa 
     * \post el resultat es el #caixa 
    */
+   void afegir_caixa(int caixa);
    
    
    //Documentacio
    bool te_caixa();
   
-   void afegir_caixa(int caixa);
    
-// He trec el canvi de caixa
    
    /** @brief
     * \pre el parametre implicit no te productes 
     * \post afegeix productes al parametre implicit
-   */
+   
    void afegir_producte(int producte);
+   */
    
    
    
@@ -96,9 +92,9 @@ class Client{
    
    /** @brief
     * \pre cert
-    * \post el resultat es la hora del ticker del parametre implicit
+    * \post el resultat es la hora del ticket del parametre implicit
    */
-   Rellotge consulta_hora(Rellotge R) const;
+   string consulta_hora();
    
    void llegeix_Client();
 };
