@@ -26,7 +26,7 @@
      return num_productes;
    }
    
-   Rellotge Client::consulta_hora() const {
+   Rellotge Client::consultar_hora() const {
     return R;
    }
    
