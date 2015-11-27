@@ -9,10 +9,6 @@
   
   Client::~Client();
 
-   
-   void Client::afegir_torn(int t){
-    torn = t;
-   }
 
    void Client::afegir_caixa(int c) {
     caixa = c;
@@ -20,7 +16,9 @@
   
    
    
-   void Client::afegir_producte();
+   void Client::afegir_producte() {
+     
+   }
    
   
    
@@ -42,5 +40,7 @@
    
    void Client::llegeix_Client() {
      cin >>  torn >> R >> numproductes;
-     for()
+     for(int i=0; i<numproductes; ++i) {
+       cin >> afegir_producte();
+     }
    }
