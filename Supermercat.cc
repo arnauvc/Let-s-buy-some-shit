@@ -24,7 +24,7 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
 
 void Supermercat::carrega(int L){
   cin >> L;
-  for (int i; i<L; ++i) {
+  for (int i=1; i<=L; ++i) {
     cin >> i(identificador del client) >> hora >> nombre de producte de diferents comprats; //Aquesta linia s'ha de canviar tota
   }
 }
