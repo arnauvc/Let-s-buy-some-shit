@@ -31,8 +31,9 @@ class Producte{
    
   /** @brief 
    * \pre Cert                             
-   * \post el resultat es el producte amb el nom, seccio, preu, temps cobrament */
+   * \post el resultat es el producte amb el nom, seccio, preu, temps cobrament 
   Producte(string nom, string seccio, double preu, int temps_cobrament);
+  */
   
   /*Destructora */
   
@@ -41,10 +42,13 @@ class Producte{
    * \post Destrueix el producte
   */ 
   ~Producte();
+  
+  
   /* Modifcadora */
   
-  /** @brief */
+  /** @brief 
   void vProducte();
+  */
   
   
   /*Consultores*/
