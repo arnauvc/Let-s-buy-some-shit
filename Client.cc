@@ -20,15 +20,15 @@
   
    
    
-   void Client::afegir_producte(int producte);
+   void Client::afegir_producte();
    
   
    
-   int Client::consultar_torn(int torn) const {
+   int Client::consultar_torn() const {
     return torn;
    }
    
-   int Client::consultar_caixa(int caixa) {
+   int Client::consultar_caixa() {
     return caixa;
    }
    
@@ -36,7 +36,7 @@
      return num_productes;
    }
    
-   Rellotge Client::consulta_hora(Rellotge R) const {
+   Rellotge Client::consulta_hora() const {
     return R;
    }
    
