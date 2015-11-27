@@ -23,7 +23,6 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
 
 void Supermercat::carrega(int L){
   for (int id=1; id<=L; ++id) {
-      cout << id << " ";
       Client = client;
       Rellotge R = client.consultar_hora();
       client.hora = R; // hem de guardar la hora del ticket
