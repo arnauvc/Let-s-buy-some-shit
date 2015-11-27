@@ -48,11 +48,12 @@ void suma_temps(int s){
 	minuts1 = (hora[3]*10)+hora[4])*60;
 	segons1 = (hora[6]*10)+hora[7]);
 	temps1 = hora1+minuts1+segons1; // la hora del rellotge en segons
-	temps1 += s;
+	temps1 += s; //sumem els segons desitjats
 	//Ara fem el proces invers
 	minuts1 = temps1/60;
 	hores1 = minuts1/60;
-	hora = to_string(int(hores1))+":"+ to_string(int(minuts1%60))+ ":"+ to_string(int(segons1%60));//modifica l'hora sumantli els segons necessaris
+	hora = to_string(int(hores1))+":"+ to_string(int(minuts1%60))+":"+ to_string(int(segons1%60));
+	//Concatena la nova hora en forma de: hores, minuts i segons amb els " : " necessaris.
 }
 
 void llegeix_hora(){
