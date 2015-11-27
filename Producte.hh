@@ -18,8 +18,6 @@ class Producte{
     double preu;
     int temps_cobrament;
     
-    int valorenter(char valor);//retorna 0 si A, 1 si B, 2 si C ....
-    
   public:
   
   /* Constructora */
