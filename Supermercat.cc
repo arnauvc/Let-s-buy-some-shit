@@ -24,9 +24,8 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
 void Supermercat::carrega(int L){
   for (int id=1; id<=L; ++id) {
       Client = client;
-      Rellotge R = client.consultar_hora();
-      client.hora = R; // hem de guardar la hora del ticket
-      client.
+      client.R = client.consultar_hora(); // hem de guardar la hora del ticket
+      client.producte = num_producte();
       mapClient.insert(make_pair(id,client));//mapeja el nombre de client i la cuantitat de productes diferents
   }
 }
