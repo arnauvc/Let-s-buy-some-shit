@@ -22,11 +22,11 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
 }
 
 void Supermercat::carrega(int L){
-  cin >> L;
   for (int id=1; id<=L; ++id) {
       cout << id << " ";
       Client = client;
-      client.hora = client.afegir_hora(); // hem de guardar la hora del ticket
+      Rellotge R = client.consultar_hora();
+      client.hora = R; // hem de guardar la hora del ticket
       client.
       mapClient.insert(make_pair(id,client));//mapeja el nombre de client i la cuantitat de productes diferents
   }
