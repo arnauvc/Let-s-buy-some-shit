@@ -75,6 +75,8 @@ class Client{
    */
    void afegir_producte(int producte);
    
+   void num_productes(int numero);
+   
    /*Consultores*/
    
    /** @brief Consulta el torn del client
