@@ -13,7 +13,6 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
     p.llegir_producte();
     string nom = p.consulta_nom();
     mapProductes.insert(make_pair(nom,p));//mapeja el nom i el producte
-    
     string seccio = p.consulta_seccio(); //consulta la seccio del producte
     int g,h;
     g = valorenter(seccio[0]); //passa la lletra a valor numeric
@@ -24,8 +23,12 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
 
 void Supermercat::carrega(int L){
   cin >> L;
-  for (int i=1; i<=L; ++i) {
-    cin >> i(identificador del client) >> hora >> nombre de producte de diferents comprats; //Aquesta linia s'ha de canviar tota
+  for (int id=1; id<=L; ++id) {
+      cout << id << " ";
+      Client = client;
+      client.hora = client.afegir_hora(); // hem de guardar la hora del ticket
+      client.
+      mapClient.insert(make_pair(id,client));//mapeja el nombre de client i la cuantitat de productes diferents
   }
 }
 
