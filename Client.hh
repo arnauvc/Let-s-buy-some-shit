@@ -34,6 +34,7 @@ class Client{
   */
   Client();
   
+  /*
   
   /** @brief Creadora amb parametres.
    * \pre Cert
@@ -41,6 +42,8 @@ class Client{
    * de productes i lhora de la compra
   */
   Client(int torn, int caixa, int producte, Rellotge R);
+  
+  */
   
   /*Destructora */
   
@@ -75,7 +78,7 @@ class Client{
    */
    void afegir_producte(int producte);
    
-   void num_productes(int numero);
+   
    
    /*Consultores*/
    
@@ -90,6 +93,9 @@ class Client{
     * \post el resultat la caixa que pertoca al client del parametre implicit
    */
    int consultar_caixa(int caixa);
+   
+   //Doxygen documentacio
+   int num_productes(); //retorna numero de productes del client del parametre implicit
    
    /** @brief
     * \pre cert
