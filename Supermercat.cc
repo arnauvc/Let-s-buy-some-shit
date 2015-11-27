@@ -39,7 +39,9 @@ void Supermercat::simula(){}
 
 void Supermercat::informa(){
   for (map<string,Producte>::const_iterator i = mapProductes.begin(); i != mapProductes.end(); ++i) {
-    cout << i->first << " " << i->second.preu << " " << i-> second.seccio << " " << i-> second.temps_cobrament << endl;
+    //cout << i->first << " " << i->second.preu << " " << i-> second.seccio << " " << i-> second.temps_cobrament << endl;
+    (i->second).escriu_producte();
+    
   }
 }
 
