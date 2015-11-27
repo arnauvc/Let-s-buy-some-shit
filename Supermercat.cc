@@ -29,12 +29,13 @@ void Supermercat::carrega(int L){
   }
 }
 
-void Supermercat::simula(){
-  //se va a cagar la burra fent això
-}
+void Supermercat::simula()
+  //se va a cagar la burra fent aixo
+  
+  
 
 void Supermercat::informa(){
-  for (map<>)::const_iterator i = d.begin(); i != d.end(); ++i) {
+  for (map<nom, producte>::const_iterator i = d.begin(); i != d.end(); ++i) {
     cout << i->first << " " << i->second.preu << " " << i-> second.seccio << " " << i-> temps_de_cobrament << endl;
   }
 }
