@@ -1,3 +1,6 @@
 - Rellotge: Comprovar si compila i documentar doxygen
 - Supermercat.cc -> Simula i cami més curt
 - Revisar el getline del main, que no funciona
+
+
+And of course, revisar totes les altres classes per veure si tot esta documentat i res falla
