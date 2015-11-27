@@ -27,12 +27,12 @@ void Supermercat::carrega(int L){
       Client client;
       client.llegeix_Client(); //el teu client, e.....
       int id;
-      id = client.consulta_torn();
-      mapClient.insert(make_pair(id,client));//mapeja el nombre de client i la cuantitat de productes diferents
+      id = client.consultar_torn();
+      mapClient.insert(make_pair(id,client));//mapeja el nombre de client i la quantitat de productes diferents
   }
 }
 
-void Supermercat::simula()
+void Supermercat::simula(){}
   //se va a cagar la burra fent aixo
   
   
