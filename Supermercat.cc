@@ -42,7 +42,7 @@ void Supermercat::informa(){
   }
 }
 
-void Supermercat::producte_seccio(string s){ //retorna la llista de tots els productes d'una seccio
+string Supermercat::producte_seccio(string s){ //retorna la llista de tots els productes d'una seccio
     
     //aquestes 3 linies es podrien posar en alguna funció
     int g,h;
