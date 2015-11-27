@@ -17,9 +17,8 @@ using namespace std;
 class Rellotge{
 
 private:	
-	string hora; /* Hora en format HH:MM. */
-	string minuts;
-	string segons;
+	string hora; /* Hora en format HH:MM:SS. */
+
 
 public:
 	
@@ -59,7 +58,7 @@ public:
 		\post Retorna 0 si són iguals, 1 si el paràmetre implícit és anterior a 
 		<em>R2</em>, 2 altrament.
 	*/
-	int compara_rellotges(Rellotge R2);
+	//int compara_rellotges(Rellotge R2);
 
 
 	/* Modificadores */
@@ -67,13 +66,15 @@ public:
 		\pre Cert
 		\post Modifica l’hora del paràmetre implícit segons parametre explicit.
 	*/
-	void modifica_hora(string h);
+	//void modifica_hora(string h);
 
 	/** @brief Modifica la data del rellotge.
 		\pre Cert
 		\post Modifica la data del paràmetre implícit segons parametre explicit.
 	*/
 	//void modifica_data(string d);
+	
+	void suma_temps(int s) //suma segons al parametre implicit
 };
 
 #endif
