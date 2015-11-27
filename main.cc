@@ -16,7 +16,7 @@ int main() {
  Supermercat super;
  string condicio,seccio, nom;
  
- while(getline(cin,condicio)){
+ while(getline(cin,condicio)){ //revisar el getline perque donara problemes
   if (condicio == "inicialitzar"){
    int r,c,x,n;
    cin >> r >> c >> x >> n;
