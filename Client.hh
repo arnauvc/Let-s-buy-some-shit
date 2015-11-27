@@ -97,5 +97,6 @@ class Client{
    */
    Rellotge consulta_hora(Rellotge R) const;
    
+   void llegeix_Client();
 };
 #endif
