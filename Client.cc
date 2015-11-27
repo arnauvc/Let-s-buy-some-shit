@@ -22,9 +22,7 @@
    
    void Client::afegir_producte(int producte);
    
-   void num_productes(int numero){
-     productes = numero;
-   }
+  
    
    int Client::consultar_torn(int torn) const {
     return torn;
@@ -32,6 +30,10 @@
    
    int Client::consultar_caixa(int caixa) {
     return caixa;
+   }
+   
+   int Client::consultar_num_productes(){
+     return num_productes;
    }
    
    Rellotge Client::consulta_hora(Rellotge R) const {
