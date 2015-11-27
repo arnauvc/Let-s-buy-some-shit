@@ -19,6 +19,7 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
     h = seccio[1];
     vec_noms[g][h].insert(nom); //inserta el nom del producte al conjunt de la posicio de la matriu
     
+  }
 }
 
 void Supermercat::carrega(int L){
