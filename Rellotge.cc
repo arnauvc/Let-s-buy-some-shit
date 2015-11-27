@@ -9,8 +9,8 @@ Rellotge::Rellotge() {
 
 Rellotge::~Rellotge() {}
 
-string Rellotge::consulta_hora() {
-	return hora;
+string Rellotge::consulta_temps() {
+	return temps_cobrament;
 }
 
 
@@ -36,7 +36,7 @@ int Rellotge::compara_hores(string hora1, string hora2) {
 int Rellotge::compara_rellotges(Rellotge R2) {
 	int h, d;
 	h = compara_hores(hora, R2.consulta_hora());
-	d = compara_dates(data, R2.consulta_data());
+	//d = compara_dates(data, R2.consulta_data());
 	
 	if (d==0) {
 		if (h==0) return 0;
@@ -49,10 +49,17 @@ int Rellotge::compara_rellotges(Rellotge R2) {
 }
 
 
-void Rellotge::modifica_hora(string h) {
+/*void Rellotge::modifica_hora(string h) {
 	hora=h;
 }
 
+
+
 void Rellotge::modifica_data(string d) {
 	data=d;
+}
+*/
+
+void suma_temps(int s){
+	
 }
