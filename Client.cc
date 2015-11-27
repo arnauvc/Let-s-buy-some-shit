@@ -14,7 +14,7 @@
     caixa = c;
    }
    
-   int Client::consultar_torn() const {
+   int Client::consultar_torn() {
     return torn;
    }
    
