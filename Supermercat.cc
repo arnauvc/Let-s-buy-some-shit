@@ -18,7 +18,6 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
     g = valorenter(seccio[0]); //passa la lletra a valor numeric
     h = seccio[1];
     vec_noms[g][h].insert(nom); //inserta el nom del producte al conjunt de la posicio de la matriu
-    
   }
 }
 
@@ -37,15 +36,12 @@ void Supermercat::simula(){}
   
   
 
-void Supermercat::informa(){
-  for (map<string,Producte>::const_iterator i = mapProductes.begin(); i != mapProductes.end(); ++i) {
-    //cout << i->first << " " << i->second.preu << " " << i-> second.seccio << " " << i-> second.temps_cobrament << endl;
-    (i->second).escriu_producte();
-    
-  }
+void Supermercat::informa(string nom_producte){
+    Producte producte = mapProductes[nom_producte];
+    producte.escriu_producte();
 }
 
-string Supermercat::producte_seccio(string s){ //retorna la llista de tots els productes d'una seccio
+void Supermercat::productes_seccio(string s){ //retorna la llista de tots els productes d'una seccio
     
     //aquestes 3 linies es podrien posar en alguna funció
     int g,h;

@@ -15,13 +15,13 @@ Producte.o: Producte.cc Producte.hh
 	g++ -c Producte.cc -D_GLIBCXX_DEBUG
  
 Rellotge.o: Rellotge.cc Rellotge.hh
-	g++ -c Rellotge.cc -D_GLIBCXX_DEBUG
+	g++ -std=c++11 -c Rellotge.cc -D_GLIBCXX_DEBUG
  
 main.o: main.cc
 	g++ -c main.cc -D_GLIBCXX_DEBUG
  
 main.exe: Supermercat.o Client.o Producte.o Rellotge.o main.o
-	g++ -o Supermercat.o Client.o Producte.o Rellotge.o main.o
+	g++ -o main Supermercat.o Client.o Producte.o Rellotge.o main.o
 	
 #practica.tar: 	Agenda.cc Agenda.hh Makefile program.cc Rellotge.cc Rellotge.hh Tasca.cc Tasca.hh
 #	tar -cvf practica.tar Agenda.cc Agenda.hh Makefile program.cc Rellotge.cc Rellotge.hh Tasca.cc Tasca.hh

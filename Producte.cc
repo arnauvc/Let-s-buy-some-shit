@@ -2,6 +2,8 @@
 
 // CREADORES //
 
+Producte::Producte() {}
+
 Producte::~Producte() {}
 
 
@@ -17,10 +19,10 @@ string Producte::consulta_seccio() {
   return seccio;
 }
 
-void llegir_producte() {
+void Producte::llegir_producte() {
   cin >> nom >> seccio >> preu >> temps_cobrament;
 }
 
-void escriu_producte() const {
+void Producte::escriu_producte() const {
   cout << nom << " "<< preu <<" "<< seccio <<" "<< temps_cobrament << endl;
 }

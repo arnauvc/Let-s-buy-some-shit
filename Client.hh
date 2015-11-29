@@ -17,7 +17,7 @@ class Client{
    int torn;//numero de torn
    int caixa; //numero de caixa
    static const int LAST_CAIXA = 20; // numero maxim de caixes
-   int numproductes; //nombre de unitats de productes. 
+   int num_productes; //nombre de unitats de productes. 
    map<string,int> producte_client;//Producte i la quantitat de cada producte
    bool assignat;
    Rellotge R;//HH:MM:SS del tiquet
@@ -79,16 +79,16 @@ class Client{
     * \pre cert
     * \post el resultat es el torn del client del parametre implicit
    */
-   int consultar_torn(int torn) const;
+   int consultar_torn() const;
    
    /** @brief
     * \pre cert
     * \post el resultat la caixa que pertoca al client del parametre implicit
    */
-   int consultar_caixa(int caixa);
+   int consultar_caixa() const;
    
    //Doxygen documentacio
-   int consultar_num_productes(); //retorna numero de productes del client del parametre implicit
+   int consultar_num_productes() const; //retorna numero de productes del client del parametre implicit
    
    /** @brief
     * \pre cert

@@ -5,9 +5,9 @@
  *  @brief Programa principal de <em>Pràctica PRO2 - Gestor d'un supermercat'</em>.
 */
 
-#include "client.hh"
+#include "Client.hh"
 #include "Producte.hh"
-#include "supermercat.hh"
+#include "Supermercat.hh"
 #include "Rellotge.hh"
 
 /** @brief Programa principal.
@@ -23,8 +23,9 @@ int main() {
    super.inicialitza(r,c,x,n);
   } 
   else if (condicio == "carregar") {
+   int l;
    cin >> l;
-   super.carrega(int l);
+   super.carrega(l);
   }
   else if (condicio == "simular") super.simula();
   else if (condicio == "informacio") {
@@ -35,7 +36,11 @@ int main() {
    cin >> seccio;
    super.productes_seccio(seccio);
   }
-  else if (condicio == "millor cami")super.millor_cami();
-  else if (codicio == "sortir") break;
+  else if (condicio == "millor") {
+      string varia;
+      cin >> varia; // llegiras cami)
+      if (varia == "cami") super.millor_cami();
+  }
+  else if (condicio == "sortir") break;
  }
 }

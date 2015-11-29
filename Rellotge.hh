@@ -17,7 +17,9 @@ using namespace std;
 class Rellotge{
 
 private:	
-	string hora; // Hora en format HH:MM:SS. 
+    int hora, minuts, segons; // hora a la que entra
+    int delta_segons; // segons que s'esta comprant
+
 public:
 	
  	/* Constructores */
@@ -52,7 +54,7 @@ public:
 		<em>R2</em>, 2 altrament.
 	*/
 	//No se si ens fara falta o no :$ pero almenys ja esta implementada
-	int compara_rellotges(Rellotge R2);
+	/* int compara_rellotges(Rellotge R2); */
 
 
 	/* Modificadores */
@@ -71,6 +73,8 @@ public:
 		
 	*/	
 	void llegir_hora(); //llegeix un string amb l'hora de la forma HH:MM:SS
+
+        string consulta_temps_fi_caixer();
 };
 
 #endif

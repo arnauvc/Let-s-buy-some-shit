@@ -10,12 +10,14 @@ Rellotge::Rellotge() {
 Rellotge::~Rellotge() {}
 
 string Rellotge::consulta_hora() {
-	return hora;
+	return to_string(hora) + ":" + to_string(minuts) + ":" + to_string(segons);
 }
 
+
+/*
 int Rellotge::compara_rellotges(Rellotge R2) {
-	hora1 = hora;
-	hora2 = R2.consulta_hora();
+	string hora1 = hora;
+	string hora2 = R2.consulta_hora();
 	if (hora1==hora2) return 0;
 	else {
 		int h1, h2;
@@ -36,28 +38,30 @@ int Rellotge::compara_rellotges(Rellotge R2) {
 				if (s1>s2) return 2;
 				else return 1;
 			}
-			
 		}
-		
 	}
 }
+*/
 
-void suma_temps(int s){
-	int temps1,hora1,minuts1,segons1;
-	hora1 = (hora[0]*10)+hora[1])*3600; //hores a segons
-	minuts1 = (hora[3]*10)+hora[4])*60;
-	segons1 = (hora[6]*10)+hora[7]);
-	temps1 = hora1+minuts1+segons1; // la hora del rellotge en segons
-	temps1 += s; //sumem els segons desitjats
-	//Ara fem el proces invers
-	minuts1 = temps1/60;
-	hores1 = minuts1/60;
-	hora = to_string(int(hores1))+":"+ to_string(int(minuts1%60))+":"+ to_string(int(segons1%60));
-	//Concatena la nova hora en forma de: hores, minuts i segons amb els " : " necessaris.
+void Rellotge::suma_temps(int s){
+    delta_segons += s;
 }
 
-void llegeix_hora(){
-	cin >> hora;
+void Rellotge::llegir_hora(){
+    string dospunts;
+    cin >> hora >> dospunts >> minuts >> dospunts >> segons;
 }
 
+
+string Rellotge::consulta_temps_fi_caixer() {
+    int temps_inicial = hora*3600 + minuts*60 + segons;
+    int temps_final = temps_inicial + delta_segons;
+    int hora_final = temps_final/3600;
+    temps_final -= hora_final*3600;
+    int minuts_final = temps_final/60;
+    temps_final -= minuts_final*60;
+    int segons_final = temps_final;
+    return to_string(hora_final)+":"+ to_string(minuts_final)+":"+ to_string(segons_final);
+    //Concatena la nova hora en forma de: hores, minuts i segons amb els " : " necessaris.
+}
 
