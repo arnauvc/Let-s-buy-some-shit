@@ -9,6 +9,7 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
   columnes = c;
   caixes = x;
   Producte p;
+  vec_noms = vector< vector< set<string> > >(rengles, vector< set<string> >(columnes));
   for (int i=0; i<n; ++i){
     p.llegir_producte();
     string nom = p.consulta_nom();
@@ -16,7 +17,7 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
     string seccio = p.consulta_seccio(); //consulta la seccio del producte
     int g,h;
     g = valorenter(seccio[0]); //passa la lletra a valor numeric
-    h = seccio[1];
+    h = seccio[1] - '0' - 1;
     vec_noms[g][h].insert(nom); //inserta el nom del producte al conjunt de la posicio de la matriu
   }
 }

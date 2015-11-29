@@ -15,6 +15,7 @@ class Producte{
   private:
     string nom;
     string seccio;
+    int quantitat;
     double preu;
     int temps_cobrament;
     
