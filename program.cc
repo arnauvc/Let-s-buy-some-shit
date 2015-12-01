@@ -33,9 +33,9 @@ int main() {
    string varia;
    cin >> varia; // llegiras cami)
    if (varia == "pagament"){
-    int l;
-    cin >> l;
-    super.simula(l);
+    int m;
+    cin >> m;
+    super.simula(m);
     }
   }
   
