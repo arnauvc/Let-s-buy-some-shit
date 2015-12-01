@@ -46,8 +46,6 @@ public:
 	string consulta_hora();
 	
 	
-	
-	
 	/** @brief Compara dos rellotges.
 		\pre El paràmetre implícit i l'explícit son dos rellotges.
 		\post Retorna 0 si són iguals, 1 si el paràmetre implícit és anterior a 
@@ -60,20 +58,22 @@ public:
 	/* Modificadores */
 
 	/** @brief 
-		\pre 
-		\post 
-		
+		\pre cert
+		\post el resultat es la suma en segons al parametre implicit
 	*/
-	void suma_temps(int s); //suma segons al parametre implicit
+	void suma_temps(int s); 
 	
 	
 	/** @brief 
-		\pre 
-		\post 
-		
+		\pre cert
+		\post introdueix l'hora en format HH:MM:SS al parametre implicit
 	*/	
-	void llegir_hora(); //llegeix un string amb l'hora de la forma HH:MM:SS
-
+	void llegir_hora();
+	
+	/** @brief 
+		\pre cert
+		\post el resultat es el temps total en caixa
+	*/
         string consulta_temps_fi_caixer();
 };
 
