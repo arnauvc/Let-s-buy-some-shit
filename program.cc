@@ -31,7 +31,11 @@ int main() {
   else if (condicio == "simular") {
    string varia;
    cin >> varia; // llegiras cami)
-   if (varia == "pagament") super.simula();
+   if (varia == "pagament"){
+    int l;
+    cin >> l;
+    super.simula(l);
+    }
   }
   
   else if (condicio == "informacio") {
