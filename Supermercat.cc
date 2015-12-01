@@ -32,7 +32,7 @@ void Supermercat::carrega(int L){
   }
 }
 
-void Supermercat::simula(){}
+void Supermercat::simula(int M){}
   //se va a cagar la burra fent aixo
   
   
