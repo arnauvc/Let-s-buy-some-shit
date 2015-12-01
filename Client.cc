@@ -27,7 +27,7 @@ string Client::consultar_hora() {
     return R.consulta_hora();
    }
 
-string consultar_hora_despres_caixer(){
+string Client::consultar_hora_despres_caixer(){
   return R.consulta_temps_fi_caixer()
 }
 
