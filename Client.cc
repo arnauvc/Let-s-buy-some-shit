@@ -26,7 +26,15 @@ int Client::consultar_num_productes() const {
 string Client::consultar_hora() {
     return R.consulta_hora();
    }
-   
+
+string consultar_hora_despres_caixer(){
+  return R.consulta_temps_fi_caixer()
+}
+
+void Client::sumar_segons(int s){
+  R.suma_temps(s);
+}
+
 void Client::llegeix_Client() {
      cin >>  torn;
      R.llegir_hora();
