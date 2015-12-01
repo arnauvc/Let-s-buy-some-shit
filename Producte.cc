@@ -20,8 +20,8 @@ string Producte::consulta_seccio() {
 }
 
 void Producte::llegir_producte() {
-  cin >> nom >> seccio >> preu >> temps_cobrament;
-//cin >>nom >> preu >>seccio>>temps_cobrament;
+  //cin >> nom >> seccio >> preu >> temps_cobrament;
+  cin >>nom >> preu >>seccio>>temps_cobrament;
 }
 
 void Producte::escriu_producte() const {
