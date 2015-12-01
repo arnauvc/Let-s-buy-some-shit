@@ -33,15 +33,6 @@ class Client{
   */
   Client();
   
-  /** @brief Creadora amb parametres.
-   * \pre Cert
-   * \post El resultat es un Client amb el torn, la caixa, numero
-   * de productes i lhora de la compra
-  
-  Client(int torn, int caixa, int producte, Rellotge R);
-  */
-  
-  
   /*Destructora */
   
   /** @brief Destructora per defecte
@@ -64,17 +55,7 @@ class Client{
    * \post Si te caixa sera cert, sino no té serà fals 
    */
    bool te_caixa();
-  
-   
-   
-   /** @brief
-    * \pre el parametre implicit no te productes 
-    * \post afegeix productes al parametre implicit
-   
-   void afegir_producte(int producte);
-   */
-   
-   
+
    
    /*Consultores*/
    
