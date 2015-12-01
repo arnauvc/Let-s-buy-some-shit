@@ -32,9 +32,14 @@ void Supermercat::carrega(int L){
   }
 }
 
-void Supermercat::simula(int M){}
+void Supermercat::simula(int M){
   //se va a cagar la burra fent aixo
-  
+  int x;//caixes normals
+  int y;//caixes rapides
+  for (int i=0; i<M; ++i){
+    
+  }
+}
   
 
 void Supermercat::informa(string nom_producte){
