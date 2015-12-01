@@ -28,7 +28,7 @@ string Client::consultar_hora() {
    }
 
 string Client::consultar_hora_despres_caixer(){
-  return R.consulta_temps_fi_caixer()
+  return R.consulta_temps_fi_caixer();
 }
 
 void Client::sumar_segons(int s){
