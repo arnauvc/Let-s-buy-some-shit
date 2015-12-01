@@ -8,6 +8,7 @@
 #include "Rellotge.hh"
 #include "Producte.hh"
 #include <map>
+#include <string>
 
 using namespace std;
 
