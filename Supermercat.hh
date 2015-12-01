@@ -58,13 +58,13 @@ class Supermercat{
    * \pre Cert
    * \post Guarda la llista de clients amb els productes associats
   */ 
-  void carrega(int M);
+  void carrega(int L);
   
   /** @brief Simula els pagaments
    * \pre Existeix un supermercat, iniciaitzat i carregat en el parametre implicit. S'especifica el nombre de configuracions diferents
    * \post Escriu per pantalla el temps mitja de pagament segons la configuracio
   */
-  void simula();
+  void simula(int M);
   
   /** @brief Dona informacio d'un producte concret 
    * \pre Existeix el producte i esta inicialitzat
