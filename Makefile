@@ -1,9 +1,9 @@
 # MAKEFILE: utilidad para preparar ejecutables en los que intervienen
 # varias clases, de forma que con una unica instruccion se compilan o linkan
 # los ficheros estrictamente necesarios.
-#
 
-all: Supermercat.o Client.o Producte.o Rellotge.o main.o main.exe
+
+all: Supermercat.o Client.o Producte.o Rellotge.o program.o program.exe
 	
 Supermercat.o: Supermercat.cc Supermercat.hh
 	g++ -c Supermercat.cc -D_GLIBCXX_DEBUG
@@ -17,14 +17,15 @@ Producte.o: Producte.cc Producte.hh
 Rellotge.o: Rellotge.cc Rellotge.hh
 	g++ -std=c++11 -c Rellotge.cc -D_GLIBCXX_DEBUG
  
-main.o: main.cc
-	g++ -c main.cc -D_GLIBCXX_DEBUG
+program.o: program.cc
+	g++ -c program.cc -D_GLIBCXX_DEBUG
  
-main.exe: Supermercat.o Client.o Producte.o Rellotge.o main.o
-	g++ -o main Supermercat.o Client.o Producte.o Rellotge.o main.o
+program.exe: Supermercat.o Client.o Producte.o Rellotge.o main.o
+	g++ -o program Supermercat.o Client.o Producte.o Rellotge.o main.o
 	
-#practica.tar: 	Agenda.cc Agenda.hh Makefile program.cc Rellotge.cc Rellotge.hh Tasca.cc Tasca.hh
-#	tar -cvf practica.tar Agenda.cc Agenda.hh Makefile program.cc Rellotge.cc Rellotge.hh Tasca.cc Tasca.hh
+#practica.tar: 	Supermercat.hh Supermercat.cc Makefile program.cc Rellotge.hh Rellotge.cc Client.hh Client.cc Producte.hh Producte.cc
+	tar -cvf practica.tar Supermercat.hh Supermercat.cc Makefile program.cc Rellotge.hh Rellotge.cc Client.hh Client.cc Producte.hh Producte.cc
+
 clean:
 	rm *.o
 	rm *.exe
