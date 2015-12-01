@@ -25,10 +25,10 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
 void Supermercat::carrega(int L){
   for (int i=0; i<L; ++i) {
       Client client;
-      client.llegeix_Client(); //el teu client, e.....
+      client.llegeix_Client(); 
       int id;
       id = client.consultar_torn();
-      mapClient.insert(make_pair(id,client));//mapeja el nombre de client i la quantitat de productes diferents
+      mapClient.insert(make_pair(id,client));//mapeja el client segons el id 
   }
 }
 
