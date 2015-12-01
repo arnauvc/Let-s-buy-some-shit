@@ -20,7 +20,7 @@ class Client{
    static const int LAST_CAIXA = 20; // numero maxim de caixes
    int num_productes; //nombre de unitats de productes. 
    map<string,int> producte_client;//nom del producte i la quantitat de cada producte
-   bool assignat;
+   bool assignat = false;
    Rellotge R;//HH:MM:SS del tiquet
     
   public:
@@ -82,7 +82,7 @@ class Client{
     * \pre cert
     * \post el resultat es la hora del ticket del parametre implicit
    */
-   string consultar_hora() const;
+   string consultar_hora();
    
    /** @brief
     * \pre cert
@@ -96,9 +96,7 @@ class Client{
    */
    void sumar_segons(int s);
    
-   
-  
-  
+
    /** @brief
     * \pre cert
     * \post introdueix els parametres del client
