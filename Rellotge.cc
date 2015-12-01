@@ -48,7 +48,7 @@ void Rellotge::suma_temps(int s){
 }
 
 void Rellotge::llegir_hora(){
-    string dospunts;
+    char dospunts;
     cin >> hora >> dospunts >> minuts >> dospunts >> segons;
 }
 
