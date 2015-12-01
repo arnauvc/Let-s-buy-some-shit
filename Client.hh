@@ -71,9 +71,12 @@ class Client{
     * \post el resultat la caixa que pertoca al client del parametre implicit
    */
    int consultar_caixa() const;
-   
-   //Doxygen documentacio
-   int consultar_num_productes() const; //retorna numero de productes del client del parametre implicit
+
+    /** @brief
+    * \pre cert
+    * \post retorna numero de productes del client del parametre implicit
+   */
+   int consultar_num_productes() const;
    
    /** @brief
     * \pre cert
@@ -81,9 +84,16 @@ class Client{
    */
    string consultar_hora() const;
    
+   /** @brief
+    * \pre cert
+    * \post el resultat es la hora del ticket despres de caixa del parametre implicit
+   */
    string consultar_hora_despres_caixer() ;
    
-   
+   /** @brief
+    * \pre cert
+    * \post el resultat es la suma de segons dels productes
+   */
    void sumar_segons(int s);
    
    
