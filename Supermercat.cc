@@ -38,9 +38,13 @@ void Supermercat::simula(){}
   
 
 void Supermercat::informa(string nom_producte){
-    Producte producte = mapProductes[nom_producte];
-    cout << "informacio " << nom_producte << ":"<<endl;
-    producte.escriu_producte();
+    map<string,Producte>::const_iterator i = mapProductes.find(nom_producte);
+    if(i == mapProductes.end()) cout << "informacio " << nom_producte << ":"<<endl << "error" <<endl;
+    else {
+        Producte producte = mapProductes[nom_producte];
+        cout << "informacio " << nom_producte << ":"<<endl;
+        producte.escriu_producte();
+    }
 }
 
 void Supermercat::productes_seccio(string s){ //retorna la llista de tots els productes d'una seccio
