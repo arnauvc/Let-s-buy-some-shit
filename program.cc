@@ -1,6 +1,7 @@
 /**
  * @mainpage Pràctica PRO2 - Gestio d'un supermercat
- 
+*/
+
 /** @file main.cc
  *  @brief Programa principal de <em>Pràctica PRO2 - Gestor d'un supermercat'</em>.
 */
@@ -19,7 +20,7 @@ int main() {
  
  while(cin>>condicio){ //revisar el getline perque donara problemes
   if (condicio == "inicialitzar"){
-   int r,c,x,n,l;
+   int r,c,x,n;
    cin >> r >> c >> x >> n;
    super.inicialitza(r,c,x,n);
   } 
