@@ -9,7 +9,10 @@ Client::~Client() {
 
 void Client::afegir_caixa(int c) {
     caixa = c;
-   }
+  ]
+
+bool Client::te_caixa();
+  return assignat;
    
 int Client::consultar_torn() const {
     return torn;
