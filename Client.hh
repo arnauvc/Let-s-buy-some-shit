@@ -78,7 +78,15 @@ class Client{
     * \pre cert
     * \post el resultat es la hora del ticket del parametre implicit
    */
-   string consultar_hora();
+   string consultar_hora() const;
+   
+   string consultar_hora_despres_caixer() ;
+   
+   
+   void sumar_segons(int s);
+   
+   
+  
   
    /** @brief
     * \pre cert
