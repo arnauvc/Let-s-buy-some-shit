@@ -39,6 +39,7 @@ void Supermercat::simula(){}
 
 void Supermercat::informa(string nom_producte){
     Producte producte = mapProductes[nom_producte];
+    cout << "informacio " << nom_producte << ":"<<endl;
     producte.escriu_producte();
 }
 
@@ -52,6 +53,7 @@ void Supermercat::productes_seccio(string s){ //retorna la llista de tots els pr
     set<string>::iterator it = vec_noms[g][h].begin();
     if (it == vec_noms[g][h].end()) cout << "seccio buida" << endl;
     else{
+      cout << "productes " << s << ":"<<endl;
       while(it != vec_noms[g][h].end() ){
         cout << *it << endl;
         ++it;
