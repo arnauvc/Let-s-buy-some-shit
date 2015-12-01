@@ -34,10 +34,31 @@ void Supermercat::carrega(int L){
 
 void Supermercat::simula(int M){
   //se va a cagar la burra fent aixo
-  int x;//caixes normals
-  int y;//caixes rapides
-  for (int i=0; i<M; ++i){
-    
+
+  for (int i=0; i<M; ++i){ //nombres de configuracions diferents de la simulacio
+    int x;//caixes normals
+    int y;//caixes rapides
+    cin >> x >> y ;
+
+    for (map<int,Client>::const_iterator i = mapClient.begin(); i != mapClient.end(); ++i){
+        int numero = (i->second).consultar_num_productes(); //nombre de productes, pero hauria de ser, nombre d'unitats de producte
+        //si el numero es bla bla bla assignar caixa;
+        int temps_acomulat = 0;
+
+        for(map<string,int>::const_iterator j = producte_client.begin(); j != producte_client.end(); ++j){//recorre el "carro" del client
+            string nom = j->first;
+            Producte p = mapProductes[nom];
+            temps_acomulat += (j->second) * p.consulta_temps();//afegeix el temps de cobrament d'un producte * quantitat del producte
+
+        }//Per anar be, al sortir d'aquest bucle s'hauria d'haver sumats tots els temps dels productes
+
+        cout << (i->second).consultar_hora() ;
+        (i->second)
+
+
+    }
+
+
   }
 }
   
