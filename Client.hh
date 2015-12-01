@@ -20,7 +20,7 @@ class Client{
    static const int LAST_CAIXA = 20; // numero maxim de caixes
    int num_productes; //nombre de unitats de productes. 
    map<string,int> producte_client;//nom del producte i la quantitat de cada producte
-   bool assignat = false;
+   bool assignat;
    Rellotge R;//HH:MM:SS del tiquet
     
   public:
