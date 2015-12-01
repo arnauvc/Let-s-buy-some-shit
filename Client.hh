@@ -59,7 +59,10 @@ class Client{
    void afegir_caixa(int caixa);
    
    
-   //Documentacio
+    /** @brief Creadora amb parametres.
+   * \pre comproba que el client tingui caixa o no.
+   * \post Si te caixa sera cert, sino no té serà fals 
+   */
    bool te_caixa();
   
    
@@ -95,7 +98,11 @@ class Client{
     * \post el resultat es la hora del ticket del parametre implicit
    */
    string consultar_hora();
-   
+  
+   /** @brief
+    * \pre cert
+    * \post introdueix els parametres del client
+   */
    void llegeix_Client();
 };
 #endif
