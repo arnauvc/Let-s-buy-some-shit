@@ -27,7 +27,12 @@ int main() {
    cin >> l;
    super.carrega(l);
   }
-  else if (condicio == "simular") super.simula();
+  else if (condicio == "simular") {
+   string varia;
+   cin >> varia; // llegiras cami)
+   if (varia == "pagament") super.simula();
+  }
+  
   else if (condicio == "informacio") {
    cin >> nom;
    super.informa(nom);
