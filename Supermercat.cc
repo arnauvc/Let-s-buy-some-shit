@@ -32,7 +32,9 @@ void Supermercat::carrega(int L){
   }
 }
 
-void Supermercat::simula(int M){
+void Supermercat::simula(int M){}
+/*
+{
   //se va a cagar la burra fent aixo
 
   for (int i=0; i<M; ++i){ //nombres de configuracions diferents de la simulacio
@@ -61,7 +63,7 @@ void Supermercat::simula(int M){
 
   }
 }
-  
+*/
 
 void Supermercat::informa(string nom_producte){
     map<string,Producte>::const_iterator i = mapProductes.find(nom_producte);
