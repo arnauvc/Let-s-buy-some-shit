@@ -47,7 +47,7 @@ void Supermercat::productes_seccio(string s){ //retorna la llista de tots els pr
     //aquestes 3 linies es podrien posar en alguna funció
     int g,h;
     g = valorenter(s[0]); //passa la lletra a valor numeric
-    h = s[1];
+    h = s[1] - '0' - 1;
     
     set<string>::iterator it = vec_noms[g][h].begin();
     if (it == vec_noms[g][h].end()) cout << "seccio buida";
