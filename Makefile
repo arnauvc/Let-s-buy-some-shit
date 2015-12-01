@@ -21,7 +21,7 @@ program.o: program.cc
 	g++ -c program.cc -D_GLIBCXX_DEBUG
  
 program.exe: Supermercat.o Client.o Producte.o Rellotge.o program.o
-	g++ -o program Supermercat.o Client.o Producte.o Rellotge.o program.o
+	g++ -o program.exe Supermercat.o Client.o Producte.o Rellotge.o program.o
 	
 #practica.tar: 	Supermercat.hh Supermercat.cc Makefile program.cc Rellotge.hh Rellotge.cc Client.hh Client.cc Producte.hh Producte.cc
 	tar -cvf practica.tar Supermercat.hh Supermercat.cc Makefile program.cc Rellotge.hh Rellotge.cc Client.hh Client.cc Producte.hh Producte.cc
