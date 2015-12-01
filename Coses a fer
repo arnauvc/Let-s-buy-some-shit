@@ -1,7 +1,5 @@
-- Rellotge: Comprovar si compila i documentar doxygen
+- Rellotge: documentar doxygen
 - Supermercat.cc -> Simula i cami més curt
-- Revisar el getline del main, que no funciona
-
 
 And of course, revisar totes les altres classes per veure si tot esta documentat i res falla
 
@@ -15,4 +13,4 @@ De moment:
 -simular pagament -> CACA
 -millor cami -> CACA
 
-Falta escriure la paraula i els :    coses de layout
+Falta escriure la "paraula" i els ":" de les funcions simular_pagament i millor_cami ..... coses de layout
