@@ -9,6 +9,7 @@
 #include "Producte.hh"
 #include "Supermercat.hh"
 #include "Rellotge.hh"
+#include <string>
 
 /** @brief Programa principal.
 */
