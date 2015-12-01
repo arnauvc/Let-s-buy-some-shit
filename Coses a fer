@@ -8,8 +8,7 @@ De moment:
 
 -inicialitzar -> FUNCIONA
 -productes_seccio -> FUNCIONA
--informacio productes -> MIG MIG
-      Falta solucionar quan demanes informacio d'un producte que no hi es
+-informacio productes -> FUNCIONA
 -carregar -> FUNCIONA
 -simular pagament -> CACA
 -millor cami -> CACA
