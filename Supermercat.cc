@@ -50,7 +50,7 @@ void Supermercat::productes_seccio(string s){ //retorna la llista de tots els pr
     h = s[1] - '0' - 1;
     
     set<string>::iterator it = vec_noms[g][h].begin();
-    if (it == vec_noms[g][h].end()) cout << "seccio buida";
+    if (it == vec_noms[g][h].end()) cout << "seccio buida" << endl;
     else{
       while(it != vec_noms[g][h].end() ){
         cout << *it << endl;
