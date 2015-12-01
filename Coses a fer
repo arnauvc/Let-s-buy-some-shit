@@ -4,3 +4,13 @@
 
 
 And of course, revisar totes les altres classes per veure si tot esta documentat i res falla
+
+
+De moment:
+
+-inicialitzar -> FUNCIONA
+-productes_seccio -> FUNCIONA
+-informacio productes -> FUNCIONA
+-carregar -> 
+
+Falta escriure la paraula i els :    coses de layout
