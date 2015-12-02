@@ -51,7 +51,7 @@ int main() {
       string varia;
       cin >> varia; // llegiras cami)
       if (varia == "cami"){
-       cin >> varia
+       cin >> varia;
        super.millor_cami(varia);
       }
   }
