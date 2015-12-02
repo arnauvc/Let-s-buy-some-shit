@@ -9,7 +9,7 @@ Rellotge::Rellotge() {
 
 Rellotge::~Rellotge() {}
 
-string Rellotge::consulta_hora() {
+string Rellotge::consulta_hora() const{
 	return to_string(hora) + ":" + to_string(minuts) + ":" + to_string(segons);
 }
 
