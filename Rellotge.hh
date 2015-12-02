@@ -43,7 +43,7 @@ public:
 		\pre Cert
 		\post Retorna l’hora del paràmetre implícit en format string (HH:MM:SS).
 	*/
-	string consulta_hora();
+	string consulta_hora() const;
 	
 	
 	/** @brief Compara dos rellotges.
