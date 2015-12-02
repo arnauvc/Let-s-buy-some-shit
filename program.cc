@@ -50,7 +50,10 @@ int main() {
   else if (condicio == "millor") {
       string varia;
       cin >> varia; // llegiras cami)
-      if (varia == "cami") super.millor_cami();
+      if (varia == "cami"){
+       cin >> varia
+       super.millor_cami(varia);
+      }
   }
   else if (condicio == "sortir") break;
  }
