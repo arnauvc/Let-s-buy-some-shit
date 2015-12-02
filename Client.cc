@@ -28,7 +28,7 @@ int Client::consultar_num_productes() const {
      return num_productes;
    }
    
-string Client::consultar_hora() {
+string Client::consultar_hora() const {
     return R.consulta_hora();
    }
 
