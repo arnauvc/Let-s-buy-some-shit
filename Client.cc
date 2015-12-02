@@ -25,10 +25,12 @@ int Client::consultar_caixa() const {
     return caixa;
    }
    
+/*   
 int Client::consultar_num_productes() const {
      return num_productes;
    }
-   
+*/
+
 int Client::consultar_quantitat() const {
     return quantitat;
 }   
@@ -48,6 +50,7 @@ void Client::sumar_segons(int s){
 void Client::llegeix_Client() {
      cin >>  torn;
      R.llegir_hora();
+     int num_productes;
      cin >> num_productes;
      for(int i=0; i<num_productes; ++i) {
          string producte;
