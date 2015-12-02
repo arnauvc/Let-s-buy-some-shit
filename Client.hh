@@ -82,7 +82,7 @@ class Client{
     * \pre cert
     * \post el resultat es la hora del ticket del parametre implicit
    */
-   string consultar_hora();
+   string consultar_hora() const;
    
    /** @brief
     * \pre cert
