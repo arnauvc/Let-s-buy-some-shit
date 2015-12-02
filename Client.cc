@@ -3,6 +3,7 @@
   
 Client::Client() {
     assignat = false;
+    quantitat = 0;
 }
 
 Client::~Client() {
@@ -28,6 +29,10 @@ int Client::consultar_num_productes() const {
      return num_productes;
    }
    
+int Client::consultar_quantitat() const {
+    return quantitat;
+}   
+   
 string Client::consultar_hora() const {
     return R.consulta_hora();
    }
@@ -46,8 +51,9 @@ void Client::llegeix_Client() {
      cin >> num_productes;
      for(int i=0; i<num_productes; ++i) {
          string producte;
-         int quantitat;
-         cin >> producte >> quantitat;
-         producte_client[producte] = quantitat;
+         int quantitat_temp;
+         cin >> producte >> quantitat_temp;
+          quantitat += quantitat_temp;
+         producte_client[producte] = quantitat_temp;
      }
    }
