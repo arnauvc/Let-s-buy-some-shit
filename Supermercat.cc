@@ -43,7 +43,7 @@ void Supermercat::simula(int M){}
     cin >> x >> y ;
 
     for (map<int,Client>::const_iterator i = mapClient.begin(); i != mapClient.end(); ++i){
-        int numero = (i->second).consultar_num_productes(); //nombre de productes, pero hauria de ser, nombre d'unitats de producte
+        int numero = (i->second).consultar_quantitat(); //nombre d'unitats de producte, si mes de 10 no pot ser caixa rapida
         //si el numero es bla bla bla assignar caixa;
         int temps_acomulat = 0;
 
