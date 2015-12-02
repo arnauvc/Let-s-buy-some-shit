@@ -83,7 +83,7 @@ class Supermercat{
    * \pre supermercat inicialitzat i carregat
    * \post Escriu per pantalla les seccions en l'ordre que s'han de recorre
   */
-  void millor_cami();
+  void millor_cami(string nom);
   
 
  };
