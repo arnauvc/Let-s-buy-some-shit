@@ -94,6 +94,48 @@ void Supermercat::productes_seccio(string s){ //retorna la llista de tots els pr
 }
 
 void Supermercat::millor_cami(string nom){
-  
+/*1. pedirle los producto al client.
+  2. encontrar las secciones de cada producto. (guardarla en un vector)
+  3. mantener el inicio y el final.
+  4. con el resto de puntos hacer permutaciones
+  5. calcular la distancia de cada permutacion, 
+  6. compararla con una distancia minima mientras calcula la distancia total
+  7. en el caso del a6 lo tengo que poner como ultimo elemento de la permutacion */
+struct permut {
+    vector<string> v;
+    map <string,bool> used;
+    int distanciaminimacamino;
+};
+
+int distanciacamino = 0;
+void permutacion(Punto A1(intentar hacer break de la permutacion), permut& p, int i) {
+    if (i == P.v.size()-1) {
+        if (distancia a1(va cambiando) a A6 < distancia minima and distanciacamino+distancia entre a1 y v[k] < distanciaminimacamino) {
+            distanciacamino += distancia entre a1 a6;
+            distanciaminimacamino = distanciacamino;
+           distancia minima = distancia a1 a a6;
+            Printpermutation(P);
+        }
+    }
+    else {
+    // Define one more location for the prefix
+    // preserving the lexicographical order of
+    // the unused elements
+        for (int k = 0; k < P.used.size(); ++k) {
+            if (not P.used[k]) { //used por un map map<string,bool>
+            //comprobar la distancia de a1 el punto v[k];
+                if (distancia a1 a v[k] < distancia minima and distanciacamino+distancia entre a1 y v[k] < distanciaminimacamino) {
+                    P.v[i] = k; // k+1
+                    P.used[k] = true;
+                    distanciacamino += distancia entre a1 v[k];
+                    distanciaminimacamino = distanciacamino;
+                    distancia minima = distancia a1 a v[k];
+                    permutacion(k,p, i + 1);
+                    P.used[k] = false;
+                }
+            }
+        }
+    } 
+  }
 }
   
