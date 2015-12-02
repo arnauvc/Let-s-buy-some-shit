@@ -93,7 +93,7 @@ void Supermercat::productes_seccio(string s){ //retorna la llista de tots els pr
     }
 }
 
-void Supermercat::millor_cami(){
+void Supermercat::millor_cami(string nom){
   
 }
   
