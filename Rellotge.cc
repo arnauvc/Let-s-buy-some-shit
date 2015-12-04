@@ -62,6 +62,7 @@ string Rellotge::consulta_temps_fi_caixer() {
     int minuts_final = temps_final/60;
     temps_final -= minuts_final*60;
     int segons_final = temps_final;
+    if (segons_final <10) return to_string(hora_final)+":"+ to_string(minuts_final)+":0"+ to_string(segons_final);
     return to_string(hora_final)+":"+ to_string(minuts_final)+":"+ to_string(segons_final);
     //Concatena la nova hora en forma de: hores, minuts i segons amb els " : " necessaris.
 }
