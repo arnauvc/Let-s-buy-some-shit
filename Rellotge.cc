@@ -4,6 +4,7 @@
 #include <string>
 
 Rellotge::Rellotge() {
+	delta_segons = 0;
 
 }
 
