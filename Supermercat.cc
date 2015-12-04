@@ -32,8 +32,8 @@ void Supermercat::carrega(int L){
   }
 }
 
-void Supermercat::simula(int M){}
-/*
+void Supermercat::simula(int M)
+
 {
   //se va a cagar la burra fent aixo
 
@@ -46,16 +46,16 @@ void Supermercat::simula(int M){}
         int numero = (i->second).consultar_quantitat(); //nombre d'unitats de producte, si mes de 10 no pot ser caixa rapida
         //si el numero es bla bla bla assignar caixa;
         int temps_acomulat = 0;
-
+/*
         for(map<string,int>::const_iterator j = producte_client.begin(); j != producte_client.end(); ++j){//recorre el "carro" del client
             string nom = j->first;
             Producte p = mapProductes[nom];
             temps_acomulat += (j->second) * p.consulta_temps();//afegeix el temps de cobrament d'un producte * quantitat del producte
 
         }//Per anar be, al sortir d'aquest bucle s'hauria d'haver sumats tots els temps dels productes
-
+*/
         cout << (i->second).consultar_hora() ;
-        (i->second)
+        
 
 
     }
@@ -63,7 +63,7 @@ void Supermercat::simula(int M){}
 
   }
 }
-*/
+
 
 void Supermercat::informa(string nom_producte){
     map<string,Producte>::const_iterator i = mapProductes.find(nom_producte);
