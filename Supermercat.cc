@@ -51,16 +51,15 @@ void Supermercat::simula(int M)
             string nom = j->first;
             Producte p = mapProductes[nom];
             temps_acomulat += (j->second) * p.consulta_temps();//afegeix el temps de cobrament d'un producte * quantitat del producte
-
         }//Per anar be, al sortir d'aquest bucle s'hauria d'haver sumats tots els temps dels productes
 */
-        cout << (i->second).consultar_hora() ;
-        
-
+        //SIMULA EL PROCES QUE HAURA DE FER. AIXI M'ASSEGURO QUE LES FUNCIONS VAN BÉ I PLANTEJO LA SOLUCIO
+        Client C = i->second;
+        C.afegir_caixa(1);
+        C.sumar_segons(10);
+        cout <<C.consultar_torn()<< " " <<C.consultar_caixa()<< " " <<C.consultar_hora() <<" " << C.consultar_hora_despres_caixer();
 
     }
-
-
   }
 }
 
