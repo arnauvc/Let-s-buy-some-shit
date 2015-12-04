@@ -32,33 +32,35 @@ void Supermercat::carrega(int L){
   }
 }
 
-void Supermercat::simula(int M)
+void Supermercat::simula(int M){
 
-{
   //se va a cagar la burra fent aixo
-
+  cout << "simular pagament:" <<endl;
   for (int i=0; i<M; ++i){ //nombres de configuracions diferents de la simulacio
     int x;//caixes normals
     int y;//caixes rapides
     cin >> x >> y ;
 
     for (map<int,Client>::const_iterator i = mapClient.begin(); i != mapClient.end(); ++i){
-        int numero = (i->second).consultar_quantitat(); //nombre d'unitats de producte, si mes de 10 no pot ser caixa rapida
+        Client C = i->second;
+        int numero = C.consultar_quantitat(); //nombre d'unitats de producte, si mes de 10 no pot ser caixa rapida
         //si el numero es bla bla bla assignar caixa;
         int temps_acomulat = 0;
-/*
-        for(map<string,int>::const_iterator j = producte_client.begin(); j != producte_client.end(); ++j){//recorre el "carro" del client
-            string nom = j->first;
-            Producte p = mapProductes[nom];
-            temps_acomulat += (j->second) * p.consulta_temps();//afegeix el temps de cobrament d'un producte * quantitat del producte
-        }//Per anar be, al sortir d'aquest bucle s'hauria d'haver sumats tots els temps dels productes
-*/
-        //SIMULA EL PROCES QUE HAURA DE FER. AIXI M'ASSEGURO QUE LES FUNCIONS VAN BÉ I PLANTEJO LA SOLUCIO
-        Client C = i->second;
-        C.afegir_caixa(1);
-        C.sumar_segons(10);
-        cout <<C.consultar_torn()<< " " <<C.consultar_caixa()<< " " <<C.consultar_hora() <<" " << C.consultar_hora_despres_caixer();
 
+        pair<map<string,int>::const_iterator,map<string,int>::const_iterator> p;
+        for(map<string,int>::const_iterator j = p.first ; j != p.second; ++j){//recorre el "carro" del client
+
+            string nom = j->first;
+            int quantitat = j->second;
+            Producte p = mapProductes[nom];
+            temps_acomulat += quantitat * p.consulta_temps();//afegeix el temps de cobrament d'un producte * quantitat del producte
+
+        }//Per anar be, al sortir d'aquest bucle s'hauria d'haver sumats tots els temps dels productes
+
+        //SIMULA EL PROCES QUE HAURA DE FER. AIXI M'ASSEGURO QUE LES FUNCIONS VAN BÉ I PLANTEJO LA SOLUCIO
+        C.afegir_caixa(5);//son valor temporals només per avaluar que funcioni
+        C.sumar_segons(temps_acomulat);//son valors temporals només per avaluar que funcioni
+        cout <<C.consultar_torn()<< " " <<C.consultar_caixa()<< " " <<C.consultar_hora() <<" " << C.consultar_hora_despres_caixer();
     }
   }
 }
