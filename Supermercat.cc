@@ -73,6 +73,7 @@ void Supermercat::informa(string nom_producte){
         cout << "informacio " << nom_producte << ":"<<endl;
         producte.escriu_producte();
     }
+  cout << endl;
 }
 
 void Supermercat::productes_seccio(string s){ //retorna la llista de tots els productes d'una seccio
@@ -91,6 +92,7 @@ void Supermercat::productes_seccio(string s){ //retorna la llista de tots els pr
         ++it;
       }
     }
+  cout << endl;
 }
 
 void Supermercat::millor_cami(string nom){
