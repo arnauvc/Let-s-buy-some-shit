@@ -104,6 +104,8 @@ void Supermercat::millor_cami(string nom){
   7. en el caso del a6 lo tengo que poner como ultimo elemento de la permutacion */
 struct permut {
     vector<string> v;
+    v[0]="A2";
+    v[1]="B1";
     map <string,bool> used;
     int distanciaminimacamino;
 };
