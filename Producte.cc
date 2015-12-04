@@ -19,6 +19,10 @@ string Producte::consulta_seccio() {
   return seccio;
 }
 
+int Producte::consulta_temps(){
+  return temps_cobrament;
+}
+
 void Producte::llegir_producte() {
   //cin >> nom >> seccio >> preu >> temps_cobrament;
   cin >>nom >> preu >>seccio>>temps_cobrament;
