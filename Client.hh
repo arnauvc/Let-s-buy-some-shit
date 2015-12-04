@@ -102,6 +102,8 @@ class Client{
    */
    void sumar_segons(int s);
    
+   //funcio que retorna un pair d'iteradors del map producte_client
+   pair<map<string,int>::const_iterator,map<string,int>::const_iterator> retorna_pair_iterador();
 
    /** @brief
     * \pre cert
