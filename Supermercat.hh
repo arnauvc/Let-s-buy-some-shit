@@ -29,6 +29,7 @@ class Supermercat{
     	return (int)valor - 'A';
 	}
     
+    int simula_temps_caixa(Client &);
     
   public:
   /*Constructora*/

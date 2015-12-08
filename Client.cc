@@ -41,8 +41,8 @@ int Client::consultar_quantitat() const {
     return quantitat;
 }   
    
-string Client::consultar_hora() const {
-    return R.consulta_hora();
+Rellotge Client::consultar_hora() const {
+    return R;
    }
 
 string Client::consultar_hora_despres_caixer(){
@@ -68,3 +68,11 @@ void Client::llegeix_Client() {
          producte_quantitat[i] = make_pair(producte,quantitat_temp); 
      }
    }
+
+
+int Client::get_temps_desplacament() { return temps_desplacament; }
+int Client::get_temps_caixer() { return temps_caixer; }
+int Client::get_temps_cua() { return temps_cua; }
+void Client::set_temps_desplacament(int temps_desplacament) { this->temps_desplacament = temps_desplacament; }
+void Client::set_temps_caixer(int temps_caixer) { this->temps_caixer = temps_caixer; }
+void Client::set_temps_cua(int temps_cua) { this->temps_cua = temps_cua; }

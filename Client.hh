@@ -24,6 +24,7 @@ class Client{
   vector< pair< string,int> > producte_quantitat;
    bool assignat;
    Rellotge R;//HH:MM:SS del tiquet
+   int temps_desplacament, temps_caixer, temps_cua; // segons
     
   public:
   
@@ -92,7 +93,7 @@ string consultar_productes(int i) const;
     * \pre cert
     * \post el resultat es la hora del ticket del parametre implicit
    */
-   string consultar_hora() const;
+   Rellotge consultar_hora() const;
    
    /** @brief
     * \pre cert
@@ -111,5 +112,12 @@ string consultar_productes(int i) const;
     * \post introdueix els parametres del client
    */
    void llegeix_Client();
+
+   int get_temps_desplacament();
+   int get_temps_caixer();
+   int get_temps_cua();
+   void set_temps_desplacament(int);
+   void set_temps_caixer(int);
+   void set_temps_cua(int);
 };
 #endif

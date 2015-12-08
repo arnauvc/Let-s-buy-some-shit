@@ -37,31 +37,82 @@ void Supermercat::simula(int M){
   //se va a cagar la burra fent aixo
   
   for (int i=0; i<M; ++i){ //nombres de configuracions diferents de la simulacio
-    int x;//caixes normals
-    int y;//caixes rapides
-    cin >> x >> y ;
+    int num_caixes_normals;
+    int num_caixes_rapides;
+    cin >> num_caixes_normals >> num_caixes_rapides ;
     cout << "simular pagament:" <<endl;
-    
-    for (map<int,Client>::const_iterator i = mapClient.begin(); i != mapClient.end(); ++i){
-        
-        Client C = i->second;
-        int numero = C.consultar_quantitat(); //nombre d'unitats de producte, si mes de 10 no pot ser caixa rapida
-        //si el numero es bla bla bla assignar caixa;
-        int temps_acomulat = 0;
 
-        for(int j=0; j< C.consultar_num_productes() ; ++j){
-            string nom = C.consultar_productes(j);
-            int quantitat = C.consultar_productes_quantitat(j);
-            Producte p = mapProductes[nom];
-            temps_acomulat += quantitat * p.consulta_temps();
+    vector< vector<Client*> > vector_caixes(caixes, vector<Client*>(0));
+    for (map<int,Client>::iterator it = mapClient.begin(); it != mapClient.end(); ++it){
+        Client *C = &it->second;
+        int caixa_assignada;
+        unsigned int min_clients = -1;
+        int min_caixes;
+
+        if (C->consultar_quantitat() < 10) min_caixes = caixes - num_caixes_rapides - num_caixes_normals;
+        else min_caixes = caixes - num_caixes_normals;
+
+        for (int j = caixes - 1; j > min_caixes - 1; j--) {
+            if (vector_caixes[j].size() < min_clients) {
+                min_clients = vector_caixes[j].size();
+                caixa_assignada = j;
+            }
         }
-        
-        //SIMULA EL PROCES QUE HAURA DE FER. AIXI M'ASSEGURO QUE LES FUNCIONS VAN BE I PLANTEJO LA SOLUCIO
-        C.afegir_caixa(5);//son valor temporals nomÃ©s per avaluar que funcioni
-        C.sumar_segons(temps_acomulat);//son valors temporals nomÃ©s per avaluar que funcioni
-        cout <<C.consultar_torn()<< " " <<C.consultar_caixa()<< " " <<C.consultar_hora() <<" " << C.consultar_hora_despres_caixer();
+        vector_caixes[caixa_assignada].push_back(C);
+        C->afegir_caixa(caixa_assignada + 1);
     }
+
+    /* for (map<int,Client>::const_iterator i = mapClient.begin(); i != mapClient.end(); ++i){ */
+    /*     cout << i->first << " " << i->second.consultar_caixa() << endl; */
+    /* } */
+
+    map<int, int> temps_cua; // id, temps
+    for (unsigned int j = 0; j < vector_caixes.size(); j++) {
+        int temps_caixa = 0;
+        Rellotge r;
+        bool primer = true;
+        for (unsigned int k = 0; k < vector_caixes[j].size(); k++) {
+            Client *c = vector_caixes[j][k];
+            if (primer) {
+                primer = false;
+                r = c->consultar_hora();
+            }
+            temps_cua[c->consultar_torn()] = temps_caixa;
+            c->set_temps_caixer(simula_temps_caixa(*c));
+            r.suma_temps(c->get_temps_caixer() + caixes - c->consultar_caixa());
+            temps_caixa = temps_caixa + c->get_temps_caixer();
+        }
+    }
+
+    /* cout << "MAP" << endl; */
+    /* for (map<int,int>::const_iterator it = temps_cua.begin(); it != temps_cua.end(); ++it){ */
+    /*     cout << it->first << " " << it->second << endl; */
+    /* } */
+
+    for (map<int, int>::iterator it = temps_cua.begin(); it != temps_cua.end(); ++it){
+        /* Client &C = mapClient[it->first]; */
+        /* cout <<C.consultar_torn()<< " " <<C.consultar_caixa()<< " " <<C.consultar_hora() <<" " << C.consultar_hora_despres_caixer() << endl; */
+    }
+
+    /* for (map<int,Client>::iterator i = mapClient.begin(); i != mapClient.end(); ++i){ */
+    /*     Client &C = i->second; */
+    /*     cout <<C.consultar_torn()<< " " <<C.consultar_caixa()<< " " <<C.consultar_hora() <<" " << C.consultar_hora_despres_caixer() << endl; */
+    /* } */
+
   }
+}
+
+int Supermercat::simula_temps_caixa(Client &C) {
+    int temps_acomulat = 0;
+
+    for(int j=0; j< C.consultar_num_productes() ; ++j){
+        string nom = C.consultar_productes(j);
+        int quantitat = C.consultar_productes_quantitat(j);
+        Producte p = mapProductes[nom];
+        temps_acomulat += quantitat * p.consulta_temps();
+    }
+
+    return temps_acomulat;
 }
 
 void Supermercat::informa(string nom_producte){
