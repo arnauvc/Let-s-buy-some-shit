@@ -9,6 +9,7 @@
 #include "Producte.hh"
 #include <map>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -20,7 +21,7 @@ class Client{
    static const int LAST_CAIXA = 20; // numero maxim de caixes
    int num_productes; //nombre de productes diferents. 
    int quantitat; //nombre d'unitats de producte
-   map<string,int> producte_client;//nom del producte i la quantitat de cada producte
+  vector< pair< string,int> > producte_quantitat;
    bool assignat;
    Rellotge R;//HH:MM:SS del tiquet
     
@@ -81,6 +82,9 @@ class Client{
    */
    int consultar_num_productes() const;
 
+string consultar_productes(int i) const;
+			   
+   int consultar_productes_quantitat(int i) const;
 
    int consultar_quantitat() const;
    
@@ -102,9 +106,6 @@ class Client{
    */
    void sumar_segons(int s);
    
-   //funcio que retorna un pair d'iteradors del map producte_client
-   pair<map<string,int>::const_iterator,map<string,int>::const_iterator> retorna_pair_iterador();
-
    /** @brief
     * \pre cert
     * \post introdueix els parametres del client
