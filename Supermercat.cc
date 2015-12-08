@@ -28,7 +28,7 @@ void Supermercat::carrega(int L){
       client.llegeix_Client(); 
       int id;
       id = client.consultar_torn();
-      mapClient.insert(make_pair(id,client));//mapeja el client segons el id 
+      mapClient[id] = client; //mapeja el client segons el id 
   }
 }
 
