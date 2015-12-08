@@ -31,6 +31,14 @@ class Supermercat{
     
     int simula_temps_caixa(Client &);
     
+    struct Permut {
+    vector<string> v; // stores a partial permutation (prefix)
+    vector<bool> used; // elements used in v
+    int part_d;
+    vector<string> best_v;
+    int best_d;
+};
+    
   public:
   /*Constructora*/
   
@@ -85,6 +93,17 @@ class Supermercat{
    * \post Escriu per pantalla les seccions en l'ordre que s'han de recorre
   */
   void millor_cami(string nom);
+  
+  
+  int calcularpunto(string S);
+  
+  int calculardistancia(Permut& P);
+  
+  void PrintPermutation(const Permut& P);
+  
+  int distance_st(string A, string B);
+  
+  void BuildPermutation(int n, Permut& P, int i);
   
 
  };
