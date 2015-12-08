@@ -24,7 +24,10 @@ int Client::consultar_torn() const {
 int Client::consultar_caixa() const {
     return caixa;
    }
-   
+ 
+int Client::consultar_num_productes() const{
+  return num_prodcutes;
+}  
 
 int Client::consultar_quantitat() const {
     return quantitat;
@@ -51,7 +54,7 @@ pair<map<string,int>::const_iterator,map<string,int>::const_iterator>Client::ret
 void Client::llegeix_Client() {
      cin >>  torn;
      R.llegir_hora();
-     int num_productes;
+     
      cin >> num_productes;
      for(int i=0; i<num_productes; ++i) {
          string producte;
