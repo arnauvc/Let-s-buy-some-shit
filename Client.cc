@@ -26,7 +26,7 @@ int Client::consultar_caixa() const {
    }
  
 int Client::consultar_num_productes() const{
-  return num_prodcutes;
+  return num_productes;
 }  
 
 int Client::consultar_quantitat() const {
