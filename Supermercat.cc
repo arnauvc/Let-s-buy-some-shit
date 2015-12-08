@@ -64,13 +64,12 @@ void Supermercat::simula(int M){
   }
 }
 
-
 void Supermercat::informa(string nom_producte){
+    cout << "informacio " << nom_producte << ":"<< endl;
     map<string,Producte>::const_iterator i = mapProductes.find(nom_producte);
-    if(i == mapProductes.end()) cout << "informacio " << nom_producte << ":"<<endl << "error" <<endl;
+    if(i == mapProductes.end()) cout << "error" <<endl;
     else {
         Producte producte = mapProductes[nom_producte];
-        cout << "informacio " << nom_producte << ":"<<endl;
         producte.escriu_producte();
     }
   cout << endl;
@@ -78,15 +77,15 @@ void Supermercat::informa(string nom_producte){
 
 void Supermercat::productes_seccio(string s){ //retorna la llista de tots els productes d'una seccio
     
-    //aquestes 3 linies es podrien posar en alguna funció
+    //aquestes 3 linies es podrien posar en alguna funciÃ³
     int g,h;
     g = valorenter(s[0]); //passa la lletra a valor numeric
     h = s[1] - '0' - 1;
     
+    cout << "productes " << s << ":"<<endl;
     set<string>::iterator it = vec_noms[g][h].begin();
-    if (it == vec_noms[g][h].end()) cout << "productes " << s << ":"<<endl << "seccio buida" << endl;
+    if (it == vec_noms[g][h].end()) cout << "seccio buida" << endl;
     else{
-      cout << "productes " << s << ":"<<endl;
       while(it != vec_noms[g][h].end() ){
         cout << *it << endl;
         ++it;
