@@ -29,6 +29,14 @@ int Client::consultar_num_productes() const{
   return num_productes;
 }  
 
+string Client::consultar_productes(int i) const {
+			    return producte_quantitat[i].first;
+		}
+			
+		int Client::consultar_productes_quantitat(int i) const {
+			    return producte_quantitat[i].second;
+			    }
+
 int Client::consultar_quantitat() const {
     return quantitat;
 }   
@@ -45,22 +53,18 @@ void Client::sumar_segons(int s){
   R.suma_temps(s);
 }
 
-pair<map<string,int>::const_iterator,map<string,int>::const_iterator>Client::retorna_pair_iterador(){
-    map<string,int>::const_iterator a = producte_client.begin();
-    map<string,int>::const_iterator b = producte_client.end();
-    return make_pair(a,b);
-}
 
 void Client::llegeix_Client() {
      cin >>  torn;
      R.llegir_hora();
-     
+
      cin >> num_productes;
+      producte_quantitat = vector < pair< string,int> > (num_productes);
      for(int i=0; i<num_productes; ++i) {
          string producte;
          int quantitat_temp;
          cin >> producte >> quantitat_temp;
           quantitat += quantitat_temp;
-         producte_client[producte] = quantitat_temp;
+         producte_quantitat[i] = make_pair(producte,quantitat_temp); 
      }
    }
