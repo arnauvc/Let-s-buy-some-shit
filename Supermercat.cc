@@ -145,51 +145,91 @@ void Supermercat::productes_seccio(string s){ //retorna la llista de tots els pr
   cout << endl;
 }
 
-void Supermercat::millor_cami(string nom){
-/*1. pedirle los producto al client.
-  2. encontrar las secciones de cada producto. (guardarla en un vector)
-  3. mantener el inicio y el final.
-  4. con el resto de puntos hacer permutaciones
-  5. calcular la distancia de cada permutacion, 
-  6. compararla con una distancia minima mientras calcula la distancia total
-  7. en el caso del a6 lo tengo que poner como ultimo elemento de la permutacion */
-struct permut {
-    vector<string> v;
-    v[0]="A2";
-    v[1]="B1";
-    map <string,bool> used;
-    int distanciaminimacamino;
-};
+int calcularpunto(string S) {
+    int n = S.size();
+	int i= 1;
+    int suma = 0;
+    while (i < n) {
+    	suma += (S[i] -'0')*pow(10,(n-i-1));
+    	++i;
+	}
+    return S[0] - 'A' +suma;
+}
 
-int distanciacamino = 0;
-void permutacion(Punto A1(intentar hacer break de la permutacion), permut& p, int i) {
-    if (i == P.v.size()-1) {
-        if (distancia a1(va cambiando) a A6 < distancia minima and distanciacamino+distancia entre a1 y v[k] < distanciaminimacamino) {
-            distanciacamino += distancia entre a1 a6;
-            distanciaminimacamino = distanciacamino;
-           distancia minima = distancia a1 a a6;
-            Printpermutation(P);
+int calculardistancia(Permut& P) {
+    int dis = 0;
+	for (int i=0; i<P.v.size()-1; ++i) {
+    	dis+= abs(calcularpunto(P.v[i+1])-calcularpunto(P.v[i]));
+	}
+    return dis;
+}
+
+void PrintPermutation(const Permut& P) {
+    int last = P.best_v.size();
+    for (int i = 0; i < last; ++i) cout << P.best_v[i] << " ";
+    cout << "A6" << endl;
+}
+
+int distance_st(string A, string B)
+{
+    int x1 = A[1]-'0';
+    int y1 = A[0]-'A';
+    int x2 = B[1]-'0';
+    int y2 = B[0]-'A';
+
+    //cout << "D: " << A << " [" << x1 << "," << y1 << "] <-> " << B << " [" << x2 << "," << y2 << "]" << endl;
+    int res = abs(x2-x1)+abs(y2-y1);
+    //cout << "D: " << res << endl;
+    return res;
+}
+
+void BuildPermutation(int n, Permut& P, int i) {
+	if (i == n)
+    {
+        //cout << "last" << endl;
+        int ldp = distance_st(P.v.at(n-1), "A6");
+        if (P.part_d + ldp < P.best_d)
+        {
+    		//cout << "===========" << endl;
+            P.best_d = P.part_d+ldp;
+            P.best_v = P.v;
+    		//cout << calculardistancia(P) << endl;
+            cout << "===========" << endl;
         }
     }
-    else {
-    // Define one more location for the prefix
-    // preserving the lexicographical order of
-    // the unused elements
-        for (int k = 0; k < P.used.size(); ++k) {
-            if (not P.used[k]) { //used por un map map<string,bool>
-            //comprobar la distancia de a1 el punto v[k];
-                if (distancia a1 a v[k] < distancia minima and distanciacamino+distancia entre a1 y v[k] < distanciaminimacamino) {
-                    P.v[i] = k; // k+1
-                    P.used[k] = true;
-                    distanciacamino += distancia entre a1 v[k];
-                    distanciaminimacamino = distanciacamino;
-                    distancia minima = distancia a1 a v[k];
-                    permutacion(k,p, i + 1);
-                    P.used[k] = false;
-                }
+    else
+    {
+        //cout << "\t i: " << i << endl;
+        int dp = std::numeric_limits<int>::max(); //distance_st(P.v[i-1], P.v[i]); //Calculamos la distancia del punto anterior al siguiente actual
+        for (int k = i; k < P.v.size(); ++k) {
+            string A = P.v.at(i-1);
+            string B = P.v.at(k);
+            int alt = distance_st(A,B);
+            if (alt < dp) //Si la distancia a este punto es menor que la de dp, escogemos esta
+            {
+                swap(P.v[i],P.v[k]);
+                P.part_d += alt;
+                BuildPermutation(n,P,i+1);
+                swap(P.v[i],P.v[k]);
+                P.part_d -= alt;
             }
         }
-    } 
-  }
+    }
+}
+
+void Supermercat::millor_cami(string nom){
+    int n;
+    cin >> n;
+    Permut P;
+    P.v = vector<string>(n);
+    P.part_d = 0;
+    P.best_v = P.v;
+    P.best_d = std::numeric_limits<int>::max();
+    for (int i=0; i<n; ++i) {
+        cin >> P.v[i];
+    }
+    BuildPermutation(n,P,1);
+    PrintPermutation(P);
+    cout << "Mejor distancia: " << P.best_d << endl;
 }
   
