@@ -18,7 +18,7 @@ class Client{
    int torn;//numero de torn
    int caixa; //numero de caixa
    static const int LAST_CAIXA = 20; // numero maxim de caixes
-   //int num_productes; //nombre de productes diferents. 
+   int num_productes; //nombre de productes diferents. 
    int quantitat; //nombre d'unitats de producte
    map<string,int> producte_client;//nom del producte i la quantitat de cada producte
    bool assignat;
@@ -74,13 +74,13 @@ class Client{
    int consultar_caixa() const;
 
 
-/*
+
     /** @brief
     * \pre cert
     * \post retorna numero de productes del client del parametre implicit
-   
+   */
    int consultar_num_productes() const;
-*/
+
 
    int consultar_quantitat() const;
    
