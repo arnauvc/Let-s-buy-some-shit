@@ -95,7 +95,7 @@ class Supermercat{
    * \pre supermercat inicialitzat i carregat
    * \post Escriu per pantalla les seccions en l'ordre que s'han de recorre
   */
-  void millor_cami(string nom);
+  void millor_cami(int c, int id,int n);
   
   /** @brief Calcula el valor de la seccio a un enter
    * \pre pre entra un string
