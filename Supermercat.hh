@@ -95,13 +95,13 @@ class Supermercat{
    * \pre supermercat inicialitzat i carregat
    * \post Escriu per pantalla les seccions en l'ordre que s'han de recorre
   */
-  void millor_cami(string nom);
+  void millor_cami(int);
   
   /** @brief Calcula el valor de la seccio a un enter
    * \pre pre entra un string
    * \post post surt un enter
   */
-  int calcularpunto(string S);
+  int calcularpunt(string S);
   
   /** @brief Calcula la distancia total de la permutació
    * \pre entra el vector de string

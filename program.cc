@@ -51,8 +51,9 @@ int main() {
       string varia;
       cin >> varia; // llegiras cami)
       if (varia == "cami"){
-       cin >> varia;
-       super.millor_cami(varia);
+        int id;
+       cin >> id;
+       super.millor_cami(id);
       }
   }
   else if (condicio == "sortir") break;

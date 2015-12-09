@@ -160,7 +160,7 @@ int Supermercat::calcularpunt(string s) {
 int Supermercat::calculardistancia(Permut& P) {
     int dis = 0;
 	for (int i=0; i<P.v.size()-1; ++i) {
-    	dis+= abs(calcularpunto(P.v[i+1])-calcularpunto(P.v[i]));
+    	dis+= abs(calcularpunt(P.v[i+1])-calcularpunt(P.v[i]));
 	}
     return dis;
 }
@@ -169,10 +169,10 @@ void Supermercat::PrintPermutation(const Permut& P) {
     int last = P.best_v.size();
     string s = "aa";
     for (int i = 0; i < last; ++i) {
-	if(s != p.best_v[i]){
+	if(s != P.best_v[i]){
     		cout << P.best_v[i] << " ";
     	}	
-    	s = p.best_v[i];
+    	s = P.best_v[i];
     }
     string s1;
     s1[0] = 'A';
@@ -233,20 +233,40 @@ void Supermercat::BuildPermutation(int n, Permut& P, int i) { // n = numero de s
 }
 
 
-void Supermercat::millor_cami(int c, int i){ //c es la ultima columna del supermercat
+void Supermercat::millor_cami(int id){ //c es la ultima columna del supermercat
      // columnes de la matriu de string;
     
+    cout << "millor cami " << id << " :" << endl;
+    Client client_del_vector;
+    map<int,Client>::const_iterator k = mapClient.find(id);
+    if (k == mapClient.end()) cout << "error" <<endl;
+    else {
+        client_del_vector = k->second;
+        
+    }
+    
+    int n = client_del_vector.consultar_num_productes();
+    
     Permut P;
-    P.v = vector<string>(c);
+    P.v = vector<string>(n);
     P.part_d = 0;
     P.best_v = P.v;
     P.best_d = std::numeric_limits<int>::max();
-    for (int i=0; i<c; ++i) {
-        cin >> P.v[i];
+    
+    
+    for(int j = 0; j < client_del_vector.consultar_num_productes(); ++j){
+        string nomdelproducte = client_del_vector.consultar_productes(j);
+        Producte prod = mapProductes[nomdelproducte];
+        P.v[j] = prod.consulta_seccio();
     }
-    string s;
+    
+    //for(int g = 0; g < P.v.size(); g++)cout << P.v[g]; Per comprovar si emplena be el vector
+    int c = columnes;
+    
+    
+    string s = "A0";
     s[0] = 'A';
-    s[1] = n + '0';
+    s[1] = c + '0';
     P.v.push_back(s);
     sort(P.v.begin(),P.v.end()-1);
     BuildPermutation(n,P,1);
