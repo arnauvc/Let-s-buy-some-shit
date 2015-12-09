@@ -145,18 +145,18 @@ void Supermercat::productes_seccio(string s){ //retorna la llista de tots els pr
   cout << endl;
 }
 
-int calcularpunto(string S) {
-    int n = S.size();
+int Supermercat::calcularpunt(string s) {
+    int n = s.size();
 	int i= 1;
     int suma = 0;
     while (i < n) {
-    	suma += (S[i] -'0')*pow(10,(n-i-1));
+    	suma += (s[i] -'0')*pow(10,(n-i-1));
     	++i;
 	}
-    return S[0] - 'A' +suma;
+    return s[0] - 'A' +suma;
 }
 
-int calculardistancia(Permut& P) {
+int Supermercat::calculardistancia(Permut& P) {
     int dis = 0;
 	for (int i=0; i<P.v.size()-1; ++i) {
     	dis+= abs(calcularpunto(P.v[i+1])-calcularpunto(P.v[i]));
@@ -164,13 +164,13 @@ int calculardistancia(Permut& P) {
     return dis;
 }
 
-void PrintPermutation(const Permut& P) {
+void Supermercat::PrintPermutation(const Permut& P) {
     int last = P.best_v.size();
     for (int i = 0; i < last; ++i) cout << P.best_v[i] << " ";
     cout << "A6" << endl;
 }
 
-int distance_st(string A, string B)
+int Supermercat::distance_st(string A, string B)
 {
     int x1 = A[1]-'0';
     int y1 = A[0]-'A';
@@ -183,7 +183,7 @@ int distance_st(string A, string B)
     return res;
 }
 
-void BuildPermutation(int n, Permut& P, int i) {
+void Supermercat::BuildPermutation(int n, Permut& P, int i) {
 	if (i == n)
     {
         //cout << "last" << endl;
@@ -218,7 +218,7 @@ void BuildPermutation(int n, Permut& P, int i) {
 }
 
 void Supermercat::millor_cami(string nom){
-    int n;
+    int n; // columnes de la matriu de string
     cin >> n;
     Permut P;
     P.v = vector<string>(n);
@@ -228,6 +228,7 @@ void Supermercat::millor_cami(string nom){
     for (int i=0; i<n; ++i) {
         cin >> P.v[i];
     }
+    sort(P.v.begin(),P.v.end());
     BuildPermutation(n,P,1);
     PrintPermutation(P);
     cout << "Mejor distancia: " << P.best_d << endl;
