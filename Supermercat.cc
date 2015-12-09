@@ -222,6 +222,7 @@ void Supermercat::BuildPermutation(int n, Permut& P, int i) {
     }
 }
 
+
 void Supermercat::millor_cami(int i){
     int n; // columnes de la matriu de string;
     
@@ -239,7 +240,7 @@ void Supermercat::millor_cami(int i){
     P.v.push_back(s);
     sort(P.v.begin(),P.v.end()-1);
     BuildPermutation(n,P,1);
+    cout << P.best_d << endl; //millor recorregut temps
     PrintPermutation(P);
-    cout << "Mejor distancia: " << P.best_d << endl;
 }
   
