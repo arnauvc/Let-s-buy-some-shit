@@ -48,11 +48,12 @@ int main() {
    super.productes_seccio(seccio);
   }
   else if (condicio == "millor") {
+      int n = 6;
       string varia;
       cin >> varia; // llegiras cami)
       if (varia == "cami"){
        cin >> varia;
-       super.millor_cami(varia);
+       super.millor_cami(c,1,n);
       }
   }
   else if (condicio == "sortir") break;
