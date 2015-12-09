@@ -237,7 +237,7 @@ void Supermercat::millor_cami(int c, int id){ //c es la ultima columna del super
      // columnes de la matriu de string;
     int n; //numero de seccion
     Permut P;
-    P.v = vector<string>(c);
+    P.v = vector<string>(n);
     P.part_d = 0;
     P.best_v = P.v;
     P.best_d = std::numeric_limits<int>::max();
