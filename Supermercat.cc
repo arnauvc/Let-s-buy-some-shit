@@ -23,6 +23,7 @@ void Supermercat::inicialitza(int r,int c,int x,int n){
 }
 
 void Supermercat::carrega(int L){
+  mapClient.clear();
   for (int i=0; i<L; ++i) {
       Client client;
       client.llegeix_Client(); 
