@@ -18,7 +18,11 @@ class Producte_client{
   public:
     /* Constructora */
 
-
+    /** @brief Creadora per defecte.
+     * \pre Cert
+     * \post El resultat es un Client amb el torn, la caixa, numero
+     * de productes i lhora de la compra
+    */
     Producte_client();
 
     /*Destructora */
@@ -28,7 +32,11 @@ class Producte_client{
      * \post Destrueix el Client
     */
     ~Producte_client();
-
+    
+    /** @brief Consultora per defecte
+     * \pre cert
+     * \post retorna la quantitat de productes
+    */
     int consulta_quantitat(string n);
 
 };
