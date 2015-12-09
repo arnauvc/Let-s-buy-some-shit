@@ -168,7 +168,7 @@ int Supermercat::calculardistancia(Permut& P) {
 void Supermercat::PrintPermutation(const Permut& P) {
     int last = P.best_v.size();
     for (int i = 0; i < last; ++i) cout << P.best_v[i] << " ";
-    cout << "A6" << endl;
+    cout << 'A' << last-1 << endl;
 }
 
 int Supermercat::distance_st(string A, string B)
@@ -188,7 +188,11 @@ void Supermercat::BuildPermutation(int n, Permut& P, int i) {
 	if (i == n)
     {
         //cout << "last" << endl;
-        int ldp = distance_st(P.v.at(n-1), "A6");
+        
+        string s;
+        s[0] = 'A';
+        s[1] = n + '0';
+        int ldp = distance_st(P.v.at(n-1),s);
         if (P.part_d + ldp < P.best_d)
         {
     		//cout << "===========" << endl;
@@ -202,7 +206,7 @@ void Supermercat::BuildPermutation(int n, Permut& P, int i) {
     {
         //cout << "\t i: " << i << endl;
         int dp = std::numeric_limits<int>::max(); //distance_st(P.v[i-1], P.v[i]); //Calculamos la distancia del punto anterior al siguiente actual
-        for (int k = i; k < P.v.size(); ++k) {
+        for (int k = i; k < P.v.size()-1; ++k) {
             string A = P.v.at(i-1);
             string B = P.v.at(k);
             int alt = distance_st(A,B);
@@ -218,9 +222,9 @@ void Supermercat::BuildPermutation(int n, Permut& P, int i) {
     }
 }
 
-void Supermercat::millor_cami(string nom){
-    int n; // columnes de la matriu de string
-    cin >> n;
+void Supermercat::millor_cami(int i){
+    int n; // columnes de la matriu de string;
+    
     Permut P;
     P.v = vector<string>(n);
     P.part_d = 0;
@@ -229,7 +233,11 @@ void Supermercat::millor_cami(string nom){
     for (int i=0; i<n; ++i) {
         cin >> P.v[i];
     }
-    sort(P.v.begin(),P.v.end());
+    string s;
+    s[0] = 'A';
+    s[1] = n + '0';
+    P.v.push_back(s);
+    sort(P.v.begin(),P.v.end()-1);
     BuildPermutation(n,P,1);
     PrintPermutation(P);
     cout << "Mejor distancia: " << P.best_d << endl;
