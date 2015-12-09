@@ -101,7 +101,7 @@ class Supermercat{
    * \pre pre entra un string
    * \post post surt un enter
   */
-  int calcularpunto(string S);
+  int calcularpunt(string S);
   
   /** @brief Calcula la distancia total de la permutació
    * \pre entra el vector de string
@@ -116,13 +116,13 @@ class Supermercat{
   void PrintPermutation(const Permut& P);
   
   /** @brief 
-   * \pre cert
-   * \post surt la permutacio correcte
+   * \pre entra dos seccions
+   * \post retorna la distancia entre dos seccions
   */
   int distance_st(string A, string B);
   
   /** @brief Construeix la permutació
-   * \pre Entra tamany del mapa, el vetor de string les diverses seccions i el nombre de seccions
+   * \pre entra tamany del mapa, el vetor de string les diverses seccions i el nombre de seccions
    * \post surt la permutacio correcte
   */
   void BuildPermutation(int c, Permut& P, int i);
