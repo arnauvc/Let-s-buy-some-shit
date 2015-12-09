@@ -233,9 +233,9 @@ void Supermercat::BuildPermutation(int n, Permut& P, int i) { // n = numero de s
 }
 
 
-void Supermercat::millor_cami(int c, int id){ //c es la ultima columna del supermercat 'id' el numero del client
+void Supermercat::millor_cami(int c, int id, int n){ //c es la ultima columna del supermercat 'id' el numero del client
      // columnes de la matriu de string;
-    int n; //numero de seccion
+     //numero de seccion
     Permut P;
     P.v = vector<string>(n);
     P.part_d = 0;
