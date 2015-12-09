@@ -95,7 +95,9 @@ class Supermercat{
    * \pre supermercat inicialitzat i carregat
    * \post Escriu per pantalla les seccions en l'ordre que s'han de recorre
   */
+
   void millor_cami(int);
+
   
   /** @brief Calcula el valor de la seccio a un enter
    * \pre pre entra un string
@@ -116,13 +118,13 @@ class Supermercat{
   void PrintPermutation(const Permut& P);
   
   /** @brief 
-   * \pre cert
-   * \post surt la permutacio correcte
+   * \pre entra dos seccions
+   * \post retorna la distancia entre dos seccions
   */
   int distance_st(string A, string B);
   
   /** @brief Construeix la permutació
-   * \pre Entra tamany del mapa, el vetor de string les diverses seccions i el nombre de seccions
+   * \pre entra tamany del mapa, el vetor de string les diverses seccions i el nombre de seccions
    * \post surt la permutacio correcte
   */
   void BuildPermutation(int c, Permut& P, int i);

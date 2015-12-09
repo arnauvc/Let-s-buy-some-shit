@@ -48,10 +48,11 @@ int main() {
    super.productes_seccio(seccio);
   }
   else if (condicio == "millor") {
+  
       string varia;
       cin >> varia; // llegiras cami)
       if (varia == "cami"){
-        int id;
+       int id;
        cin >> id;
        super.millor_cami(id);
       }
