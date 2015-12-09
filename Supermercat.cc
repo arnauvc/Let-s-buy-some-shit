@@ -169,10 +169,10 @@ void Supermercat::PrintPermutation(const Permut& P) {
     int last = P.best_v.size();
     string s = "aa";
     for (int i = 0; i < last; ++i) {
-	if(s != p.best_v[i]){
+	if(s != P.best_v[i]){
     		cout << P.best_v[i] << " ";
     	}	
-    	s = p.best_v[i];
+    	s = P.best_v[i];
     }
     string s1;
     s1[0] = 'A';
@@ -233,20 +233,20 @@ void Supermercat::BuildPermutation(int n, Permut& P, int i) { // n = numero de s
 }
 
 
-void Supermercat::millor_cami(int c, int i){ //c es la ultima columna del supermercat
+void Supermercat::millor_cami(int c, int id){ //c es la ultima columna del supermercat 'id' el numero del client
      // columnes de la matriu de string;
-    
+    int n; //numero de seccion
     Permut P;
     P.v = vector<string>(c);
     P.part_d = 0;
     P.best_v = P.v;
     P.best_d = std::numeric_limits<int>::max();
-    for (int i=0; i<c; ++i) {
+    for (int i=0; i<n; ++i) {
         cin >> P.v[i];
     }
     string s;
-    s[0] = 'A';
-    s[1] = n + '0';
+    s[0] = 'A';		/*el ultim element */
+    s[1] = c + '0'; 	/*el ultim element */
     P.v.push_back(s);
     sort(P.v.begin(),P.v.end()-1);
     BuildPermutation(n,P,1);
