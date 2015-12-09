@@ -167,8 +167,18 @@ int Supermercat::calculardistancia(Permut& P) {
 
 void Supermercat::PrintPermutation(const Permut& P) {
     int last = P.best_v.size();
-    for (int i = 0; i < last; ++i) cout << P.best_v[i] << " ";
-    cout << 'A' << last-1 << endl;
+    string s = "aa";
+    for (int i = 0; i < last; ++i) {
+	if(s != p.best_v[i]){
+    		cout << P.best_v[i] << " ";
+    	}	
+    	s = p.best_v[i];
+    }
+    string s1;
+    s1[0] = 'A';
+    s1[1] = (last-1) + '0';
+    if(s != s1 ) cout << s1 << endl;
+    cout << endl;
 }
 
 int Supermercat::distance_st(string A, string B)
@@ -184,7 +194,7 @@ int Supermercat::distance_st(string A, string B)
     return res;
 }
 
-void Supermercat::BuildPermutation(int n, Permut& P, int i) {
+void Supermercat::BuildPermutation(int n, Permut& P, int i) { // n = numero de seccion
 	if (i == n)
     {
         //cout << "last" << endl;
@@ -223,15 +233,15 @@ void Supermercat::BuildPermutation(int n, Permut& P, int i) {
 }
 
 
-void Supermercat::millor_cami(int i){
-    int n; // columnes de la matriu de string;
+void Supermercat::millor_cami(int c, int i){ //c es la ultima columna del supermercat
+     // columnes de la matriu de string;
     
     Permut P;
-    P.v = vector<string>(n);
+    P.v = vector<string>(c);
     P.part_d = 0;
     P.best_v = P.v;
     P.best_d = std::numeric_limits<int>::max();
-    for (int i=0; i<n; ++i) {
+    for (int i=0; i<c; ++i) {
         cin >> P.v[i];
     }
     string s;
