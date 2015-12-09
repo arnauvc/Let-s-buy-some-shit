@@ -250,6 +250,7 @@ void Supermercat::millor_cami(int c, int id){ //c es la ultima columna del super
     P.v.push_back(s);
     sort(P.v.begin(),P.v.end()-1);
     BuildPermutation(n,P,1);
+    cout << "millor cami " << id<< ":" << endl;
     cout << P.best_d << endl; //millor recorregut temps
     PrintPermutation(P);
 }
