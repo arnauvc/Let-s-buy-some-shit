@@ -3,6 +3,7 @@
 #include <string>
 #include <cmath>
 #include <limits>
+#include <algorithm>
 using namespace std;
 
 struct Permut {
@@ -13,7 +14,7 @@ struct Permut {
     int best_d;
 };
 
-int calcularpunto(string S) {
+int calcularpunt(string S) {
     int n = S.size();
 	int i= 1;
     int suma = 0;
@@ -27,15 +28,25 @@ int calcularpunto(string S) {
 int calculardistancia(Permut& P) {
     int dis = 0;
 	for (int i=0; i<P.v.size()-1; ++i) {
-    	dis+= abs(calcularpunto(P.v[i+1])-calcularpunto(P.v[i]));
+    	dis+= abs(calcularpunt(P.v[i+1])-calcularpunt(P.v[i]));
 	}
     return dis;
 }
 
 void PrintPermutation(const Permut& P) {
     int last = P.best_v.size();
-    for (int i = 0; i < last; ++i) cout << P.best_v[i] << " ";
-    cout << "A6" << endl;
+    string s = "aa";
+    for (int i = 0; i < last; ++i) {
+	if(s != P.best_v[i]){
+    		cout << P.best_v[i] << " ";
+    	}	
+    	s = P.best_v[i];
+    }
+    string s1;
+    s1[0] = 'A';
+    s1[1] = (last-1) + '0';
+    if(s != s1 ) cout << s1 << endl;
+    cout << endl;
 }
 
 int distance_st(string A, string B)
@@ -55,7 +66,10 @@ void BuildPermutation(int n, Permut& P, int i) {
 	if (i == n)
     {
         //cout << "last" << endl;
-        int ldp = distance_st(P.v.at(n-1), "A6");
+        string s;
+        s[0] = 'A';
+        s[1] = n + '0';
+        int ldp = distance_st(P.v.at(n-1),s);
         if (P.part_d + ldp < P.best_d)
         {
     		//cout << "===========" << endl;
@@ -69,7 +83,7 @@ void BuildPermutation(int n, Permut& P, int i) {
     {
         //cout << "\t i: " << i << endl;
         int dp = std::numeric_limits<int>::max(); //distance_st(P.v[i-1], P.v[i]); //Calculamos la distancia del punto anterior al siguiente actual
-        for (int k = i; k < P.v.size(); ++k) {
+        for (int k = i; k < P.v.size()-1; ++k) {
             string A = P.v.at(i-1);
             string B = P.v.at(k);
             int alt = distance_st(A,B);
@@ -97,7 +111,12 @@ int main() {
     for (int i=0; i<n; ++i) {
         cin >> P.v[i];
     }
+    string s;
+    s[0] = 'A';
+    s[1] = n + '0';
+    P.v.push_back(s);
+    sort(P.v.begin(),P.v.end()-1);
     BuildPermutation(n,P,1);
-    PrintPermutation(P);
     cout << "Mejor distancia: " << P.best_d << endl;
+    PrintPermutation(P);
 }
