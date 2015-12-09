@@ -174,7 +174,7 @@ void Supermercat::PrintPermutation(const Permut& P) {
     	}	
     	s = P.best_v[i];
     }
-    string s1;
+    string s1 = "A0";
     s1[0] = 'A';
     s1[1] = (last-1) + '0';
     if(s != s1 ) cout << s1 << endl;
@@ -199,7 +199,7 @@ void Supermercat::BuildPermutation(int n, Permut& P, int i) { // n = numero de s
     {
         //cout << "last" << endl;
         
-        string s;
+        string s = "A0";
         s[0] = 'A';
         s[1] = n + '0';
         int ldp = distance_st(P.v.at(n-1),s);
