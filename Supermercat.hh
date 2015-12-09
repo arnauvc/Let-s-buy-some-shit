@@ -7,6 +7,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cmath>
+#include <limits>
+#include <algorithm>
 #include <set>
 #include <utility>
 #include "Producte.hh"
