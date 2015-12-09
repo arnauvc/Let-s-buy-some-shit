@@ -160,7 +160,7 @@ int Supermercat::calcularpunt(string s) {
 int Supermercat::calculardistancia(Permut& P) {
     int dis = 0;
 	for (int i=0; i<P.v.size()-1; ++i) {
-    	dis+= abs(calcularpunto(P.v[i+1])-calcularpunto(P.v[i]));
+    	dis+= abs(calcularpunt(P.v[i+1])-calcularpunt(P.v[i]));
 	}
     return dis;
 }
