@@ -94,16 +94,35 @@ class Supermercat{
   */
   void millor_cami(string nom);
   
-  
+  /** @brief Calcula el valor de la seccio a un enter
+   * \pre pre entra un string
+   * \post post surt un enter
+  */
   int calcularpunto(string S);
   
+  /** @brief Calcula la distancia total de la permutació
+   * \pre entra el vector de string
+   * \post surt la distancia de la permutacio total
+  */
   int calculardistancia(Permut& P);
   
+  /** @brief Escriu la permutació correcta
+   * \pre cert
+   * \post surt la permutacio correcte
+  */
   void PrintPermutation(const Permut& P);
   
+  /** @brief 
+   * \pre cert
+   * \post surt la permutacio correcte
+  */
   int distance_st(string A, string B);
   
-  void BuildPermutation(int n, Permut& P, int i);
+  /** @brief Construeix la permutació
+   * \pre Entra tamany del mapa, el vetor de string les diverses seccions i el nombre de seccions
+   * \post surt la permutacio correcte
+  */
+  void BuildPermutation(int c, Permut& P, int i);
   
 
  };
